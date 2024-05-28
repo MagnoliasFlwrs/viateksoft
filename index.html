@@ -5,9 +5,221 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./dark-theme.css">
+    <title>Главная</title>
 </head>
-<body>
+<body class="light-theme">
+    <header class="header">
+        <div class="theme-row">
+            <div class="content">
+                <div class="switch-theme">
+                    <div class="light-icon active">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 18.25V20.75" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3.25V5.75" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.58006 16.42L5.81006 18.19" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.1899 5.81L16.4199 7.58" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.75 12H3.25" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.75 12H18.25" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.58006 7.58L5.81006 5.81" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18.1899 18.19L16.4199 16.42" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" class="agreement-check">
+                        <span class="slider round"></span>
+                    </label>
+                    <div class="dark-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7 15C17.2 15.8 14.3 15.3 12.3 13.3C9.80005 10.8 9.60005 6.8 11.6 4C7.50005 4.4 4.30005 7.8 4.30005 12C4.30005 16.4 7.90005 20 12.3 20C15.6 20 18.5 17.9 19.7 15V15Z" stroke="#626C81" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <p>
+                    E-mail:
+                    <a href="mailto:info@viatekmedia.ru">info@viatekmedia.ru</a>
+                </p>
+            </div>
 
+        </div>
+        <div class="header-contacts-row">
+            <div class="content">
+                <a href="#" class="logo">
+                    <svg width="132" height="72" viewBox="0 0 132 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M87.3159 63.132L86.6679 63.516C86.6599 63.5 86.6519 63.48 86.6439 63.456C86.6359 63.432 86.6239 63.412 86.6079 63.396C86.4959 63.18 86.3239 62.984 86.0919 62.808C85.8599 62.624 85.5479 62.532 85.1559 62.532C84.7319 62.532 84.4119 62.62 84.1959 62.796C83.9799 62.964 83.8319 63.148 83.7519 63.348C83.7119 63.428 83.6839 63.508 83.6679 63.588C83.6599 63.668 83.6559 63.744 83.6559 63.816C83.6559 64.24 83.8119 64.572 84.1239 64.812C84.4439 65.052 84.7959 65.26 85.1799 65.436C85.2439 65.468 85.3079 65.5 85.3719 65.532C85.4359 65.556 85.4999 65.584 85.5639 65.616C85.5879 65.624 85.6079 65.636 85.6239 65.652C85.6479 65.66 85.6719 65.668 85.6959 65.676C86.2079 65.924 86.6759 66.22 87.0999 66.564C87.5319 66.908 87.7479 67.444 87.7479 68.172C87.7479 68.86 87.5039 69.46 87.0159 69.972C86.5359 70.476 85.8799 70.728 85.0479 70.728C84.4479 70.728 83.9599 70.604 83.5839 70.356C83.2159 70.108 82.9239 69.836 82.7079 69.54C82.6279 69.42 82.5559 69.304 82.4919 69.192C82.4279 69.072 82.3759 68.96 82.3359 68.856L83.1039 68.472C83.1119 68.504 83.1239 68.54 83.1399 68.58C83.1559 68.612 83.1719 68.644 83.1879 68.676C83.3319 69.028 83.5599 69.348 83.8719 69.636C84.1919 69.924 84.6079 70.068 85.1199 70.068C85.6639 70.068 86.0919 69.888 86.4039 69.528C86.7239 69.16 86.8839 68.724 86.8839 68.22C86.8839 67.836 86.7919 67.532 86.6079 67.308C86.4319 67.076 86.1679 66.856 85.8159 66.648C85.7039 66.584 85.5799 66.52 85.4439 66.456C85.3079 66.384 85.1599 66.312 84.9999 66.24C84.4399 65.976 83.9359 65.668 83.4879 65.316C83.0399 64.964 82.8159 64.472 82.8159 63.84C82.8159 63.728 82.8239 63.608 82.8399 63.48C82.8639 63.352 82.8999 63.224 82.9479 63.096C83.0679 62.784 83.2919 62.5 83.6199 62.244C83.9559 61.988 84.4559 61.86 85.1199 61.86C85.2559 61.86 85.4119 61.872 85.5879 61.896C85.7719 61.912 85.9559 61.956 86.1399 62.028C86.3639 62.108 86.5799 62.236 86.7879 62.412C86.9959 62.58 87.1719 62.82 87.3159 63.132Z" fill="black"/>
+                        <path d="M95.8098 66.3C95.8098 65.1 96.2178 64.06 97.0338 63.18C97.8498 62.3 98.9538 61.86 100.346 61.86C101.554 61.86 102.61 62.26 103.514 63.06C104.426 63.852 104.882 64.932 104.882 66.3C104.882 67.668 104.426 68.748 103.514 69.54C102.61 70.332 101.554 70.728 100.346 70.728C99.1217 70.728 98.0578 70.332 97.1538 69.54C96.2578 68.74 95.8098 67.66 95.8098 66.3ZM96.6737 66.3C96.6737 67.436 97.0378 68.348 97.7657 69.036C98.4937 69.724 99.3538 70.068 100.346 70.068C101.338 70.068 102.198 69.724 102.926 69.036C103.654 68.348 104.018 67.436 104.018 66.3C104.018 65.156 103.654 64.244 102.926 63.564C102.198 62.876 101.338 62.532 100.346 62.532C99.3538 62.532 98.4937 62.876 97.7657 63.564C97.0378 64.252 96.6737 65.164 96.6737 66.3Z" fill="black"/>
+                        <path d="M113.492 70.5V62.1H117.452V62.772H114.308V65.46H117.368V66.132H114.308V70.5H113.492Z" fill="black"/>
+                        <path d="M127.094 70.5V62.772H124.85V62.1H130.154V62.772H127.91V70.5H127.094Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.33796 71.1844L6.67602 61.9709H5.77117L3.33796 68.9696L0.90461 61.9709H-0.000244141L3.33796 71.1844ZM14.7558 70.83H15.5875V61.9709H14.7557L14.7558 70.83ZM23.667 70.83H24.5227L25.7088 67.9444H29.2914L30.4775 70.83H31.3332L27.5061 61.7178L23.667 70.83ZM26.0024 67.2357L27.5064 63.6035L28.9981 67.2357H26.0024ZM40.7581 70.83H41.5897V62.6796H43.8765V61.9709H38.4714V62.6796H40.7583L40.7581 70.83ZM51.9558 70.83H56.5412V70.1213H52.7869V66.2233H56.4063V65.5147H52.7869V62.6796H56.5409V61.9709H51.9557L51.9558 70.83ZM65.1712 70.83H66.0031V66.5271L69.8304 70.83H70.9432L66.7973 66.2613L70.8571 61.9709H69.8301L66.0031 66.0841V61.9709H65.171L65.1712 70.83Z" fill="#2454C0"/>
+                        <mask id="mask0_358_2788" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="61" height="51">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.732 0.519564H0L21.925 50.7049H40.1347L60.7444 0.5H48.5847L33.5615 36.6701L18.732 0.519564Z" fill="black"/>
+                        </mask>
+                        <g mask="url(#mask0_358_2788)">
+                            <rect x="-321.393" y="-1.86664" width="375.984" height="54.9067" fill="url(#paint0_linear_358_2788)"/>
+                        </g>
+                        <mask id="mask1_358_2788" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="21" y="0" width="62" height="51">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.1915 50.6733H21.9146L43.5358 0.504089H60.6512L82.2022 50.4775H69.4958L55.0114 14.4791L40.1915 50.6733Z" fill="#1B3E8B"/>
+                        </mask>
+                        <g mask="url(#mask1_358_2788)">
+                            <rect x="-321.393" y="-1.86664" width="375.984" height="54.9067" fill="url(#paint1_linear_358_2788)"/>
+                        </g>
+                        <mask id="mask2_358_2788" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="43" y="0" width="89" height="51">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M43.5676 0.5L60.6543 0.519564L73.863 30.1909L86.7073 0.504105H90.5058L90.5075 0.5H96.6837L96.682 0.504105H109.728L131.28 50.4775H112.667L98.1828 14.4791L83.5589 50.4775H76.302L76.3019 50.4777H63.9494L43.5676 0.5Z" fill="#2454C0"/>
+                        </mask>
+                        <g mask="url(#mask2_358_2788)">
+                            <rect x="-244.556" y="-1.86664" width="375.984" height="54.9067" fill="url(#paint2_linear_358_2788)"/>
+                        </g>
+                        <defs>
+                            <linearGradient id="paint0_linear_358_2788" x1="-321.393" y1="-1.86664" x2="54.5911" y2="-1.86664" gradientUnits="userSpaceOnUse">
+                                <stop/>
+                                <stop offset="0.226479"/>
+                                <stop offset="0.5625" stop-color="#1B3E8B"/>
+                                <stop offset="0.872405"/>
+                                <stop offset="1"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_358_2788" x1="-321.393" y1="14.8578" x2="54.5911" y2="14.8578" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#1B3E8B"/>
+                                <stop offset="0.25" stop-color="#1B3E8B"/>
+                                <stop offset="0.463542"/>
+                                <stop offset="0.755208" stop-color="#1B3E8B"/>
+                                <stop offset="1" stop-color="#1B3E8B"/>
+                            </linearGradient>
+                            <linearGradient id="paint2_linear_358_2788" x1="-244.556" y1="14.8578" x2="131.429" y2="14.8578" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2454C0"/>
+                                <stop offset="0.25" stop-color="#2454C0"/>
+                                <stop offset="0.463542"/>
+                                <stop offset="0.755208" stop-color="#2454C0"/>
+                                <stop offset="1" stop-color="#24C062"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </a>
+                <div class="line"></div>
+                <p class="slogan">Надёжный<br>
+                    путь к вашей<br>
+                    безопасности!</p>
+                <div class="label">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M12.429 4C8.01068 4 4.42896 7.58172 4.42896 12C4.42896 16.4183 8.01068 20 12.429 20C16.8472 20 20.429 16.4183 20.429 12C20.429 7.58172 16.8472 4 12.429 4ZM2.42896 12C2.42896 6.47715 6.90611 2 12.429 2C17.9518 2 22.429 6.47715 22.429 12C22.429 17.5228 17.9518 22 12.429 22C6.90611 22 2.42896 17.5228 2.42896 12Z" fill="white"/>
+                        <path d="M12.429 14C11.8767 14 11.429 13.5523 11.429 13L11.429 7C11.429 6.44772 11.8767 6 12.429 6C12.9812 6 13.429 6.44772 13.429 7L13.429 13C13.429 13.5523 12.9812 14 12.429 14Z" fill="white"/>
+                        <path d="M10.929 16.5C10.929 15.6716 11.6005 15 12.429 15C13.2574 15 13.929 15.6716 13.929 16.5C13.929 17.3284 13.2574 18 12.429 18C11.6005 18 10.929 17.3284 10.929 16.5Z" fill="white"/>
+                    </svg>
+                    <span>только легальное
+                        Програмное обеспечение</span>
+                </div>
+                <div class="time-label">
+                    <p>
+                        Оформление онлайн: <br> <span>Круглосуточно!</span>
+                    </p>
+                    <p>
+                        Время работы офиса:<br>
+                        <span>Пн-Пт, 9:00 - 18:00</span>
+                    </p>
+                </div>
+                <a class="social-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M3.54321 21L4.8145 16.3778C4.03003 15.0247 3.61782 13.491 3.61857 11.9183C3.62083 7.00125 7.64118 3 12.5809 3C14.978 3.00075 17.2282 3.93 18.9208 5.616C20.6125 7.302 21.544 9.543 21.5432 11.9265C21.541 16.8443 17.5206 20.8455 12.5809 20.8455C11.0813 20.8448 9.6035 20.4705 8.29453 19.7595L3.54321 21ZM8.51458 18.1448C9.77758 18.891 10.9833 19.338 12.5779 19.3387C16.6834 19.3387 20.0278 16.0133 20.03 11.925C20.0315 7.8285 16.703 4.5075 12.5839 4.506C8.47539 4.506 5.13327 7.8315 5.13176 11.919C5.131 13.5878 5.62234 14.8372 6.44751 16.1445L5.69468 18.8805L8.51458 18.1448ZM17.0956 14.0468C17.0398 13.9537 16.8906 13.8982 16.666 13.7865C16.4422 13.6748 15.3413 13.1355 15.1355 13.0612C14.9306 12.987 14.7813 12.9495 14.6314 13.173C14.4822 13.3958 14.0526 13.8982 13.9223 14.0468C13.7919 14.1953 13.6608 14.214 13.437 14.1023C13.2131 13.9905 12.4912 13.7557 11.6359 12.996C10.9705 12.405 10.5206 11.6753 10.3902 11.4517C10.2599 11.229 10.3767 11.1082 10.4882 10.9973C10.5892 10.8975 10.712 10.737 10.8243 10.6065C10.9381 10.4775 10.975 10.3845 11.0504 10.2353C11.125 10.0868 11.0881 9.95625 11.0315 9.8445C10.975 9.7335 10.5274 8.63625 10.3413 8.19C10.1589 7.75575 9.97426 7.81425 9.83711 7.8075L9.40757 7.8C9.25836 7.8 9.01571 7.8555 8.81073 8.079C8.60576 8.3025 8.02701 8.841 8.02701 9.93825C8.02701 11.0355 8.82957 12.0953 8.9411 12.2437C9.05339 12.3923 10.5199 14.6438 12.7663 15.609C13.3006 15.8385 13.718 15.9757 14.0428 16.0785C14.5794 16.248 15.0677 16.224 15.4535 16.167C15.8838 16.1032 16.7783 15.6277 16.9652 15.1073C17.1521 14.586 17.1521 14.1398 17.0956 14.0468Z" fill="#2E3441"/>
+                    </svg>
+                </a>
+                <a class="social-link" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.89488 11.0269C9.72671 9.05119 12.9487 7.74867 14.5608 7.11936C19.1637 5.32254 20.1202 5.01042 20.7436 5.00011C20.8807 4.99784 21.1873 5.02973 21.3859 5.18096C21.5535 5.30866 21.5997 5.48116 21.6218 5.60223C21.6438 5.7233 21.6713 5.9991 21.6495 6.2146C21.4 8.6743 20.3207 14.6433 19.7716 17.3983C19.5393 18.564 19.0818 18.9548 18.6389 18.9931C17.6764 19.0762 16.9455 18.3961 16.0133 17.8225C14.5545 16.9251 13.7304 16.3664 12.3144 15.4907C10.6779 14.4786 11.7388 13.9223 12.6714 13.0132C12.9154 12.7753 17.1563 9.15509 17.2384 8.82668C17.2487 8.7856 17.2582 8.6325 17.1613 8.55166C17.0644 8.47081 16.9213 8.49846 16.8181 8.52045C16.6718 8.55161 14.3414 9.99723 9.82685 12.8573C9.16537 13.2836 8.56622 13.4913 8.0294 13.4804C7.4376 13.4684 6.29922 13.1664 5.45295 12.9082C4.41496 12.5915 3.59 12.4241 3.66183 11.8863C3.69925 11.6062 4.11026 11.3197 4.89488 11.0269Z" fill="#2E3441"/>
+                    </svg>
+                </a>
+                <div class="callback">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path d="M8.77148 9H16.7715" stroke="#2E3441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.77148 13H16.7715" stroke="#2E3441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.77148 6C3.77148 4.34315 5.11463 3 6.77148 3H18.7715C20.4283 3 21.7715 4.34315 21.7715 6V20.4992C21.7715 20.681 21.6728 20.8484 21.5139 20.9365C21.3549 21.0246 21.1606 21.0195 21.0065 20.9232L17.9294 19H6.77148C5.11463 19 3.77148 17.6569 3.77148 16V6Z" stroke="#2E3441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Написать нам</span>
+                </div>
+                <a class="header-phone" href="tel:+79103333333">+7 910 333 33 33</a>
+                <div class="cart-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M5.96905 6.625L5.30205 3.625H3.37305" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.73124 14.835L5.96924 6.625H18.6272C19.2642 6.625 19.7382 7.212 19.6052 7.835L18.1032 14.835C18.0042 15.296 17.5972 15.625 17.1252 15.625H8.70824C8.23724 15.625 7.83024 15.296 7.73124 14.835Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.4648 19.25C17.2578 19.25 17.0898 19.418 17.0918 19.625C17.0918 19.832 17.2598 20 17.4668 20C17.6738 20 17.8418 19.832 17.8418 19.625C17.8408 19.418 17.6728 19.25 17.4648 19.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8.85593 19.25C8.64893 19.25 8.48093 19.418 8.48293 19.625C8.48193 19.832 8.64993 20 8.85693 20C9.06393 20 9.23193 19.832 9.23193 19.625C9.23193 19.418 9.06393 19.25 8.85593 19.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="not-empty"></span>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="content">
+                <div class="catalog-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M4 7C4 6.44772 4.44772 6 5 6H19C19.5523 6 20 6.44772 20 7C20 7.55228 19.5523 8 19 8H5C4.44772 8 4 7.55228 4 7ZM4 12C4 11.4477 4.44772 11 5 11H19C19.5523 11 20 11.4477 20 12C20 12.5523 19.5523 13 19 13H5C4.44772 13 4 12.5523 4 12ZM4 17C4 16.4477 4.44772 16 5 16H19C19.5523 16 20 16.4477 20 17C20 17.5523 19.5523 18 19 18H5C4.44772 18 4 17.5523 4 17Z" fill="#2454C0"/>
+                    </svg>
+                    <span>Каталог товаров</span>
+                    <div class="submenu-container">
+                        <div class="submenu-lists">
+                            <ul class="submenu-list-1">
+                                <li><a href="#">ПДД</a></li>
+                                <li><a href="#">Windows</a></li>
+                                <li><a href="#" class="dropright">Для офиса</a></li>
+                                <li><a href="#">Безопасность</a></li>
+                                <li><a href="#">Серверное ПО</a></li>
+                                <li><a href="#">Сеть и интернет</a></li>
+                                <li><a href="#">Графика и дизайн</a></li>
+                                <li><a href="#">Карты и навигация</a></li>
+                                <li><a href="#">Спец. предложения</a></li>
+                                <li><a href="#">Программирование</a></li>
+                                <li><a href="#">Специализированное ПО</a></li>
+                            </ul>
+                            <ul class="submenu-list-2">
+                                <li><a href="#">P7-офис</a></li>
+                                <li><a href="#">Мойофис образование</a></li>
+                                <li><a href="#">Мойофис частное облако 2</a></li>
+                                <li><a href="#">Мойофис почта</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+                <ul>
+                    <li><a href="#">Юридическим лицам</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Акции и новости</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Поиск">
+                    <span class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="11.0588" cy="11.0586" r="7.06194" stroke="#C5D7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.0034 20.0033L16.0518 16.0517" stroke="#C5D7FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </div>
+                <button class="order-status">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M8 17L10 19L8 21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 15V17C3 18.1 3.9 19 5 19H10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 9V7C21 5.9 20.1 5 19 5H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16 7L14 5L16 3" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 8.89999V5.09999C11 4.69999 10.8 4.29999 10.4 4.09999L7.1 2.19999C6.7 1.99999 6.3 1.99999 5.9 2.19999L2.6 4.09999C2.2 4.29999 2 4.69999 2 5.09999V8.89999C2 9.29999 2.2 9.69999 2.6 9.89999L5.9 11.8C6.3 12 6.7 12 7.1 11.8L10.4 9.89999C10.8 9.69999 11 9.29999 11 8.89999Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2.19995 4.5L6.49995 7L10.8 4.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 7V12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22 18.9V15.1C22 14.7 21.8 14.3 21.4 14.1L18.1 12.2C17.7 12 17.3 12 16.9 12.2L13.6 14.1C13.2 14.3 13 14.7 13 15.1V18.9C13 19.3 13.2 19.7 13.6 19.9L16.9 21.8C17.3 22 17.7 22 18.1 21.8L21.4 19.9C21.8 19.7 22 19.3 22 18.9Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2 14.5L17.5 17L21.8 14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M17.5 17V22" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Статус заказа</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,41 @@
+:root {
+  --brand-color: #2454C0;
+  --dark-color: #2E3441;
+  --green-color: #24C062;
+  --red-color: #F00;
+  --light-bg: #EEF2FA;
+  --dark-bg: #1F232B;
+  --white: #fff; }
 
+.dark-theme {
+  background: var(--dark-bg); }
+  .dark-theme .header .theme-row {
+    background: var(--dark-bg); }
+  .dark-theme .header .header-contacts-row {
+    background: var(--dark-color);
+    padding: 38px 0; }
+    .dark-theme .header .header-contacts-row .content .slogan {
+      color: var(--white); }
+    .dark-theme .header .header-contacts-row .content .time-label p {
+      color: var(--white); }
+      .dark-theme .header .header-contacts-row .content .time-label p:last-child span {
+        color: var(--white); }
+    .dark-theme .header .header-contacts-row .content .social-link svg path {
+      fill: var(--white); }
+    .dark-theme .header .header-contacts-row .content .callback svg path {
+      stroke: var(--white); }
+    .dark-theme .header .header-contacts-row .content .callback span {
+      color: var(--white); }
+    .dark-theme .header .header-contacts-row .content .header-phone {
+      color: var(--white); }
+  .dark-theme .header .header-nav {
+    border-radius: 0px 0px 5px 5px;
+    background: linear-gradient(90deg, #2E3441 -22.16%, #2454C0 17.76%, #2454C0 56.58%, #24C062 117.92%); }
+    .dark-theme .header .header-nav .content .catalog-btn {
+      background: var(--dark-color); }
+      .dark-theme .header .header-nav .content .catalog-btn svg path {
+        fill: var(--white); }
+      .dark-theme .header .header-nav .content .catalog-btn span {
+        color: var(--white); }
 
 /*# sourceMappingURL=dark-theme.css.map */

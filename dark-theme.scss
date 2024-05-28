@@ -1,3 +1,69 @@
-.dark-theme {
+:root {
+  --brand-color: #2454C0;
+  --dark-color: #2E3441;
+  --green-color: #24C062;
+  --red-color: #F00;
+  --light-bg: #EEF2FA;
+  --dark-bg: #1F232B;
+  --white: #fff;
+}
 
+.dark-theme {
+  background: var(--dark-bg);
+  .header {
+    .theme-row {
+      background: var(--dark-bg);
+    }
+    .header-contacts-row {
+      background: var(--dark-color);
+      padding: 38px 0;
+      .content {
+        .slogan {
+          color: var(--white);
+        }
+        .time-label {
+          p {
+            color: var(--white);
+            &:last-child {
+              span {
+                color: var(--white);
+              }
+            }
+          }
+        }
+        .social-link {
+          svg path {
+            fill: var(--white);
+          }
+        }
+        .callback {
+          svg path {
+            stroke: var(--white);
+          }
+          span {
+            color: var(--white);
+          }
+        }
+        .header-phone {
+          color: var(--white);
+        }
+      }
+
+    }
+    .header-nav {
+      border-radius: 0px 0px 5px 5px;
+      background: linear-gradient(90deg, #2E3441 -22.16%, #2454C0 17.76%, #2454C0 56.58%, #24C062 117.92%);
+      .content {
+        .catalog-btn {
+          background: var(--dark-color);
+          svg path {
+            fill: var(--white);
+          }
+          span {
+            color: var(--white);
+          }
+        }
+      }
+    }
+  }
 }
