@@ -650,10 +650,11 @@ body {
       .info {
         display: flex;
         flex-direction: column;
+
         .header-phone {
           color: var(--dark-color);
           font-family: "Myriad Pro";
-          font-size: 25px;
+          font-size: 30px;
           font-style: normal;
           font-weight: 700;
           line-height: normal;
@@ -673,7 +674,6 @@ body {
             padding: 10px 0;
           }
           span {
-            width: 170px;
             color: var(--red-color);
             font-family: "Myriad Pro";
             font-size: 12px;
@@ -736,11 +736,13 @@ body {
     display: flex;
     width: 100%;
     min-height: 100vh;
-    padding: 30px 20px 50px 20px;
+    height: 100%;
+    overflow-y: auto;
+    padding: 50px 0;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
-    background: #242D2F;
+    gap: 50px;
+    background: var(--dark-color);
     position: fixed;
     top: 0;
     left: -2100px;
@@ -756,6 +758,92 @@ body {
       width: 100%;
       display: flex;
       justify-content: flex-end;
+      gap: 33px;
+      align-items: center;
+      padding: 0 50px;
+      .switch-theme {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .light-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg path {
+            transition: .3s ease;
+          }
+          &.active {
+            svg path {
+              stroke: #fff;
+            }
+          }
+        }
+        .switch {
+          position: relative;
+          display: inline-block;
+          width: 33px;
+          height: 16px;
+          flex-shrink: 0;
+        }
+
+        .switch input {display:none;}
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--brand-color);
+          -webkit-transition: .4s;
+          transition: .4s;
+
+        }
+        .slider:before {
+          position: absolute;
+          content: "";
+          height: 12px;
+          width: 12px;
+          left: 2px;
+          bottom: 2px;
+          background-color: white;
+          -webkit-transition: .4s;
+          transition: .4s;
+        }
+        input:checked + .slider {
+          background-color: var(--brand-color);
+        }
+
+        input:focus + .slider {
+          box-shadow: 0 0 1px #EBEBEB;
+        }
+
+        input:checked + .slider:before {
+          -webkit-transform: translateX(15px);
+          -ms-transform: translateX(15px);
+          transform: translateX(15px);
+        }
+        .slider.round {
+          border-radius: 34px;
+        }
+        .slider.round:before {
+          border-radius: 50%;
+        }
+        .dark-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg path {
+            transition: .3s ease;
+          }
+          &.active {
+            svg path {
+              stroke: #fff;
+            }
+          }
+        }
+      }
       &.close-row-inside {
         justify-content: space-between;
         align-items: center;
@@ -785,41 +873,30 @@ body {
     ul {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      padding: 0 30px;
+      gap: 50px;
+      padding: 0 50px;
+      width: 100%;
       li {
         a {
           color: #FFF;
-          font-family: "Noto Sans";
-          font-size: 20px;
+          font-family: "Myriad Pro";
+          font-size: 25px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 400;
           line-height: normal;
-          text-transform: uppercase;
           display: flex;
           gap: 20px;
           align-items: center;
-          &.little-text {
-            color: #FFF;
-            font-family: "Noto Sans";
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            text-transform: uppercase;
-          }
           &::before {
-            content: '';
-            width: 9px;
-            height: 9px;
-            border-radius: 50px;
-            flex-shrink: 0;
-            background: #F1C880;;
+            content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
+            display: block;
           }
           &.dropright {
             &::after {
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M9.29289 19.2071C8.90237 18.8166 8.90237 18.1834 9.29289 17.7929L14.5858 12.5L9.29289 7.20711C8.90237 6.81658 8.90237 6.18342 9.29289 5.79289C9.68342 5.40237 10.3166 5.40237 10.7071 5.79289L16.7071 11.7929C17.0976 12.1834 17.0976 12.8166 16.7071 13.2071L10.7071 19.2071C10.3166 19.5976 9.68342 19.5976 9.29289 19.2071Z' fill='white'/%3E%3C/svg%3E");
+              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
               display: block;
+              margin-top: 5px;
+              margin-left: auto;
             }
           }
         }
@@ -827,16 +904,18 @@ body {
           display: flex;
           width: 100%;
           min-height: 100vh;
-          padding: 30px 20px 50px 20px;
+          padding: 50px 0;
           flex-direction: column;
           align-items: flex-start;
-          gap: 30px;
-          background: #242D2F;
+          gap: 50px;
+          background: var(--dark-color);
           position: fixed;
           top: 0;
           left: -2100px;
           opacity: 0;
           z-index: 4;
+          height: 100%;
+          overflow-y: auto;
           &.active {
             left: 0;
             opacity: 1;
@@ -846,12 +925,26 @@ body {
             li {
               a {
                 color: #FFF;
-                font-family: "Noto Sans";
-                font-size: 15px;
+                font-family: "Myriad Pro";
+                font-size: 25px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                text-transform: uppercase;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                &::before {
+                  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
+                  display: block;
+                }
+                &.dropright {
+                  &::after {
+                    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
+                    display: block;
+                    margin-top: 5px;
+                    margin-left: auto;
+                  }
+                }
               }
             }
           }
@@ -861,41 +954,82 @@ body {
     .mobile-menu-line {
       width: 100%;
       height: 1px;
-      background: #495052;
+      background: #626C81;
       flex-shrink: 0;
       margin-top: auto;
     }
     .mobile-contacts {
+      padding: 0 50px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 30px;
       align-items: center;
-      width: 100%;
-      .phone-link {
-        color: #FFF;
-        font-family: "Noto Sans";
+      a {
+        &::before {
+          content: none !important;
+        }
+      }
+      .text {
+        color: #A9AEB9;
+        font-family: "Myriad Pro";
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        &::before {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 25 25' fill='none'%3E%3Cpath d='M21.4995 16.9767V19.6864C21.5037 20.7223 20.5723 21.5873 19.5265 21.4929C10.5001 21.5 3.50006 14.435 3.50713 5.46919C3.41294 4.42895 4.27364 3.50106 5.30817 3.50009H8.02331C8.46253 3.49577 8.88835 3.651 9.22138 3.93684C10.1682 4.74949 10.7772 7.50777 10.5429 8.60428C10.3599 9.46036 9.49696 10.0593 8.91026 10.6448C10.1986 12.9062 12.0747 14.7785 14.3405 16.0644C14.9272 15.4788 15.5274 14.6176 16.3851 14.435C17.4855 14.2008 20.2615 14.8106 21.0709 15.764C21.358 16.1021 21.5105 16.5337 21.4995 16.9767Z' stroke='%23F1C880' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-          display: block;
-        }
+        margin-bottom: 20px;
+      }
+      .header-phone {
+        color: #FFF;
+        font-family: "Myriad Pro";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 50px;
       }
       .social {
         display: flex;
         gap: 30px;
         align-items: center;
         justify-content: center;
-        a {
-          &::before {
-            content: none;
+        margin-bottom: 25px;
+        .callback {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          @media (max-width: 1288px) {
+            padding: 10px;
           }
+          span {
+            color: var(--white);
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      .email {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        color: #FFF;
+        text-align: right;
+        font-family: "Myriad Pro";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        a {
+          color: #FFF;
+          text-align: right;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
         }
       }
     }

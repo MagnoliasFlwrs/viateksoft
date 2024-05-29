@@ -1,13 +1,14 @@
 // theme-switch
 
-const themeSwitchInput = document.querySelector('.switch input');
-const lightThemeIcon = document.querySelector('.light-icon');
-const darkThemeIcon = document.querySelector('.dark-icon');
+const themeSwitchInputs = document.querySelectorAll('.switch input');
 const body = document.querySelector('body');
 
-if (themeSwitchInput) {
-    themeSwitchInput.addEventListener('input' , () => {
-        if (themeSwitchInput.checked) {
+
+themeSwitchInputs?.forEach(el => {
+    el.addEventListener('input' , ()=>{
+        const lightThemeIcon = el.closest('.switch-theme').querySelector('.light-icon');
+        const darkThemeIcon = el.closest('.switch-theme').querySelector('.dark-icon');
+        if (el.checked) {
             lightThemeIcon.classList.remove('active');
             darkThemeIcon.classList.add('active');
             body.classList.remove('light-theme');
@@ -19,7 +20,8 @@ if (themeSwitchInput) {
             body.classList.remove('dark-theme');
         }
     })
-}
+})
+
 
 // catalog-btn
 

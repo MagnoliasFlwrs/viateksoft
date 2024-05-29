@@ -65,5 +65,106 @@
         }
       }
     }
+    .mobile-header {
+      display: none;
+      background: var(--dark-color);
+      @media (max-width: 1100px) {
+        display: block;
+      }
+      .burger-row  {
+        display: flex;
+        padding: 15px 20px;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        background: linear-gradient(90deg, #2E3441 -9.46%, #2454C0 45.48%, #24C062 112.38%);
+        .order-status {
+          display: flex;
+          padding: 10px 15px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          flex: 1 0 0;
+          align-self: stretch;
+          border-radius: 10px;
+          border: 1px solid rgba(197, 215, 255, 0.24);
+          background: #24C062;
+          span {
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+          }
+        }
+        .cart-btn {
+          cursor: pointer;
+          display: flex;
+          padding: 10px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px;
+          background: var(--white);
+          position: relative;
+          .not-empty {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50px;
+            background: var(--red-color);
+            right: 9px;
+            top: 10px;
+          }
+        }
+      }
+      .logo-row {
+        display: flex;
+        padding: 20px;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        justify-content: space-between;
+        .info {
+          display: flex;
+          flex-direction: column;
+
+          .header-phone {
+            color: var(--white);
+          }
+          .label {
+            svg path {
+              fill: var(--white);
+            }
+            span {
+              color: var(--white);
+            }
+          }
+        }
+      }
+      .search-row {
+        padding: 0 20px 20px;
+        .search {
+          flex-grow: 1;
+          position: relative;
+          input {
+            border: 1px solid var(--white);
+            background: var(--white);
+
+          }
+          .search-btn {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+    }
   }
 }
