@@ -335,4 +335,147 @@
       }
     }
   }
+  .product-card {
+    background: #2E3441;
+    border: none;
+    &:hover {
+      border-radius: 15px;
+      background: #22262F;
+    }
+    .title-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .product-title {
+        color: var(--white);
+      }
+      .product-chapter {
+        color: var(--white);
+      }
+    }
+    .price {
+      .total-price {
+        color: #fff;
+      }
+    }
+    button {
+      display: flex;
+      padding: 15px 20px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      border: 1px solid var(--brand-color);
+      background: transparent;
+      cursor: pointer;
+      &:hover {
+        background: #5287FF;
+        svg path {
+          stroke: #FFFFFF;
+        }
+        span {
+          color: #FFFFFF;
+        }
+      }
+      span {
+        color: var(--brand-color);
+        font-family: "Myriad Pro";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+  .show-more {
+    background: var(--dark-color);
+    &:hover {
+      background: #5287FF;
+      svg path {
+        fill: #FFFFFF;
+      }
+      span {
+        color: #FFFFFF;
+      }
+    }
+  }
+  .advantages {
+    padding: 50px 0 100px;
+    .advantages-swiper {
+      width: 100%;
+      .swiper-slide {
+        height: 100%;
+        .advantages-card {
+          .title {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .technology {
+    padding: 100px 0;
+    background: var(--dark-color);
+    .technology-wrap {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      width: 100%;
+      .technology-arrow {
+        cursor: pointer;
+        svg path {
+          fill: var(--dark-bg);
+          &:last-child {
+            stroke: #FFFFFF;
+          }
+
+        }
+      }
+      .technology-swiper {
+        width: calc(100% - 80px - 100px);
+        @media (max-width: 1230px) {
+          width: 100%;
+        }
+        .swiper-slide {
+          .logo-wrapper {
+            display: flex;
+            padding: 30px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px;
+            background: #FFF;
+            height: 80px;
+            &.windows {
+              border-radius: 15px;
+              background: #0DADEA;
+            }
+            &.kaspersky {
+              border-radius: 15px;
+              background: #006D5C;
+            }
+            //img {
+            //  width: 100%;
+            //  height: 100%;
+            //  object-fit: contain;
+            //}
+          }
+        }
+        .swiper-scrollbar {
+          position: static;
+          margin-top: 30px;
+          display: none;
+          @media (max-width: 1230px) {
+            display: block;
+          }
+          .swiper-scrollbar-drag {
+            border-radius: 10px;
+            background: var(--brand-color);
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
 }

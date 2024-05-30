@@ -1315,11 +1315,19 @@ body {
 
 .chapter {
   padding: 15px 0;
+  @media (max-width: 1100px) {
+    padding: 30px 0 0;
+  }
 
   .content {
     display: flex;
     gap: 10px;
     align-items: center;
+    @media (max-width: 1024px) {
+      svg {
+        display: none;
+      }
+    }
     p {
       color: #D7DFF0;
       text-align: center;
@@ -1329,6 +1337,9 @@ body {
       font-weight: 700;
       line-height: 100%; /* 30px */
       text-transform: uppercase;
+      @media (max-width: 1100px) {
+        font-size: 25px;
+      }
     }
     .line {
       flex-grow: 1;
@@ -1347,4 +1358,350 @@ body {
   gap: 30px;
   border-radius: 15px;
   background: #FFF;
+  border: 1px solid #fff;
+  &:hover{
+    border-radius: 5px;
+    border: 1px solid #EDEDED;
+    background: #FAFBFF;
+    .img-container {
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .title-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    .product-title {
+      color: var(--dark-color);
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 25px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 25px */
+    }
+    .product-chapter {
+      color: var(--dark-color);
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 15px */
+    }
+  }
+  .img-container {
+    height: 210px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .labels {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1px;
+      .label {
+        &.top {
+          display: flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 0px 5px 5px 0px;
+          background: var(--brand-color);
+          color: #FAFBFF;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 10px */
+          text-transform: uppercase;
+          width: fit-content;
+        }
+        &.new {
+          display: flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 0px 5px 5px 0px;
+          background: var(--green-color);
+          color: #FAFBFF;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 10px */
+          text-transform: uppercase;
+          width: fit-content;
+        }
+        &.sale {
+          display: flex;
+          padding: 5px 10px;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 0px 5px 5px 0px;
+          background: var(--red-color);
+          color: #FAFBFF;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 10px */
+          text-transform: uppercase;
+          width: fit-content;
+        }
+      }
+    }
+
+  }
+  .price {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+    .sale-price {
+      color: #C2C2C2;
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 20px */
+      text-decoration-line: line-through;
+      height: 20px;
+    }
+    .total-price {
+      color: #2E3441;
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 30px */
+    }
+  }
+  button {
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--brand-color);
+    background: transparent;
+    cursor: pointer;
+    &:hover {
+      background: #5287FF;
+      svg path {
+        stroke: #FFFFFF;
+      }
+      span {
+        color: #FFFFFF;
+      }
+    }
+    span {
+      color: var(--brand-color);
+      font-family: "Myriad Pro";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}
+
+.product-slider {
+  padding-bottom: 50px;
+  .products-slider {
+    padding: 50px 0;
+    @media (max-width: 1024px) {
+      padding: 30px 0;
+    }
+  }
+}
+.show-more {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 15px;
+  background: #F7F9FD;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: #5287FF;
+    svg path {
+      fill: #FFFFFF;
+    }
+    span {
+      color: #FFFFFF;
+    }
+  }
+  span {
+    color: var(--brand-color);
+    font-family: "Myriad Pro";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+}
+.advantages {
+  padding: 50px 0 100px;
+  .advantages-swiper {
+    width: 100%;
+    .swiper-slide {
+      height: 100%;
+      .advantages-card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+          .title {
+            color: #2E3441;
+            text-align: center;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            height: 48px;
+            span {
+              text-transform: none;
+            }
+          }
+        .subtitle {
+          margin-top: auto;
+          color: #AFB7C9;
+          text-align: center;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    .custom-swiper-pagination {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      display: none;
+      @media (max-width: 1180px) {
+        display: flex;
+      }
+      .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+        border-radius: 50px;
+        background: #626C81;
+        &.swiper-pagination-bullet-active {
+          width: 18px;
+          height: 18px;
+          background: var(--brand-color);
+          border-radius: 50px;
+
+        }
+      }
+    }
+  }
+}
+.technology {
+  padding: 100px 0;
+  background: #FFFFFF;
+  .technology-wrap {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    .technology-arrow {
+      cursor: pointer;
+      @media (max-width: 1230px) {
+        display: none;
+      }
+      &.technology-prev {
+        &:hover {
+          svg path {
+            fill: var(--brand-color);
+            &:last-child {
+              stroke: #FFFFFF;
+            }
+
+          }
+        }
+      }
+      &.technology-next {
+        &:hover {
+          svg path {
+            fill: var(--brand-color);
+            &:last-child {
+              stroke: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+    .technology-swiper {
+      width: calc(100% - 80px - 100px);
+      @media (max-width: 1230px) {
+        width: 100%;
+      }
+      .swiper-slide {
+        .logo-wrapper {
+          display: flex;
+          padding: 30px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 15px;
+          background: #FFF;
+          height: 80px;
+          &.windows {
+            border-radius: 15px;
+            background: #0DADEA;
+          }
+          &.kaspersky {
+            border-radius: 15px;
+            background: #006D5C;
+          }
+          //img {
+          //  width: 100%;
+          //  height: 100%;
+          //  object-fit: contain;
+          //}
+        }
+      }
+      .swiper-scrollbar {
+        position: static;
+        margin-top: 30px;
+        display: none;
+        @media (max-width: 1230px) {
+          display: block;
+        }
+        .swiper-scrollbar-drag {
+          border-radius: 10px;
+          background: var(--brand-color);
+          height: 2px;
+        }
+      }
+    }
+  }
 }

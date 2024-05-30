@@ -1309,10 +1309,20 @@ body {
 .chapter {
   padding: 15px 0;
 }
+@media (max-width: 1100px) {
+  .chapter {
+    padding: 30px 0 0;
+  }
+}
 .chapter .content {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .chapter .content svg {
+    display: none;
+  }
 }
 .chapter .content p {
   color: #D7DFF0;
@@ -1323,6 +1333,11 @@ body {
   font-weight: 700;
   line-height: 100%; /* 30px */
   text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+  .chapter .content p {
+    font-size: 25px;
+  }
 }
 .chapter .content .line {
   flex-grow: 1;
@@ -1339,6 +1354,343 @@ body {
   gap: 30px;
   border-radius: 15px;
   background: #FFF;
+  border: 1px solid #fff;
+}
+.product-card:hover {
+  border-radius: 5px;
+  border: 1px solid #EDEDED;
+  background: #FAFBFF;
+}
+.product-card:hover .img-container img {
+  transform: scale(1.2);
+}
+.product-card .title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.product-card .title-block .product-title {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 25px */
+}
+.product-card .title-block .product-chapter {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+}
+.product-card .img-container {
+  height: 210px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.product-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-card .img-container .labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.product-card .img-container .labels .label.top {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--brand-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .img-container .labels .label.new {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--green-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .img-container .labels .label.sale {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--red-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.product-card .price .sale-price {
+  color: #C2C2C2;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+  text-decoration-line: line-through;
+  height: 20px;
+}
+.product-card .price .total-price {
+  color: #2E3441;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 30px */
+}
+.product-card button {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--brand-color);
+  background: transparent;
+  cursor: pointer;
+}
+.product-card button:hover {
+  background: #5287FF;
+}
+.product-card button:hover svg path {
+  stroke: #FFFFFF;
+}
+.product-card button:hover span {
+  color: #FFFFFF;
+}
+.product-card button span {
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.product-slider {
+  padding-bottom: 50px;
+}
+.product-slider .products-slider {
+  padding: 50px 0;
+}
+@media (max-width: 1024px) {
+  .product-slider .products-slider {
+    padding: 30px 0;
+  }
+}
+
+.show-more {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 15px;
+  background: #F7F9FD;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+.show-more:hover {
+  background: #5287FF;
+}
+.show-more:hover svg path {
+  fill: #FFFFFF;
+}
+.show-more:hover span {
+  color: #FFFFFF;
+}
+.show-more span {
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.advantages {
+  padding: 50px 0 100px;
+}
+.advantages .advantages-swiper {
+  width: 100%;
+}
+.advantages .advantages-swiper .swiper-slide {
+  height: 100%;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .title {
+  color: #2E3441;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  height: 48px;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .title span {
+  text-transform: none;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .subtitle {
+  margin-top: auto;
+  color: #AFB7C9;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.advantages .advantages-swiper .custom-swiper-pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  display: none;
+}
+@media (max-width: 1180px) {
+  .advantages .advantages-swiper .custom-swiper-pagination {
+    display: flex;
+  }
+}
+.advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background: #626C81;
+}
+.advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 18px;
+  height: 18px;
+  background: var(--brand-color);
+  border-radius: 50px;
+}
+
+.technology {
+  padding: 100px 0;
+  background: #FFFFFF;
+}
+.technology .technology-wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.technology .technology-wrap .technology-arrow {
+  cursor: pointer;
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-arrow {
+    display: none;
+  }
+}
+.technology .technology-wrap .technology-arrow.technology-prev:hover svg path {
+  fill: var(--brand-color);
+}
+.technology .technology-wrap .technology-arrow.technology-prev:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.technology .technology-wrap .technology-arrow.technology-next:hover svg path {
+  fill: var(--brand-color);
+}
+.technology .technology-wrap .technology-arrow.technology-next:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.technology .technology-wrap .technology-swiper {
+  width: calc(100% - 80px - 100px);
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-swiper {
+    width: 100%;
+  }
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: #FFF;
+  height: 80px;
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.windows {
+  border-radius: 15px;
+  background: #0DADEA;
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.kaspersky {
+  border-radius: 15px;
+  background: #006D5C;
+}
+.technology .technology-wrap .technology-swiper .swiper-scrollbar {
+  position: static;
+  margin-top: 30px;
+  display: none;
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-swiper .swiper-scrollbar {
+    display: block;
+  }
+}
+.technology .technology-wrap .technology-swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  border-radius: 10px;
+  background: var(--brand-color);
+  height: 2px;
 }
 
 /*# sourceMappingURL=style.css.map */

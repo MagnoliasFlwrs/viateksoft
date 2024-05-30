@@ -304,5 +304,140 @@
   height: 1px;
   background: #626C81;
 }
+.dark-theme .product-card {
+  background: #2E3441;
+  border: none;
+}
+.dark-theme .product-card:hover {
+  border-radius: 15px;
+  background: #22262F;
+}
+.dark-theme .product-card .title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.dark-theme .product-card .title-block .product-title {
+  color: var(--white);
+}
+.dark-theme .product-card .title-block .product-chapter {
+  color: var(--white);
+}
+.dark-theme .product-card .price .total-price {
+  color: #fff;
+}
+.dark-theme .product-card button {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--brand-color);
+  background: transparent;
+  cursor: pointer;
+}
+.dark-theme .product-card button:hover {
+  background: #5287FF;
+}
+.dark-theme .product-card button:hover svg path {
+  stroke: #FFFFFF;
+}
+.dark-theme .product-card button:hover span {
+  color: #FFFFFF;
+}
+.dark-theme .product-card button span {
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.dark-theme .show-more {
+  background: var(--dark-color);
+}
+.dark-theme .show-more:hover {
+  background: #5287FF;
+}
+.dark-theme .show-more:hover svg path {
+  fill: #FFFFFF;
+}
+.dark-theme .show-more:hover span {
+  color: #FFFFFF;
+}
+.dark-theme .advantages {
+  padding: 50px 0 100px;
+}
+.dark-theme .advantages .advantages-swiper {
+  width: 100%;
+}
+.dark-theme .advantages .advantages-swiper .swiper-slide {
+  height: 100%;
+}
+.dark-theme .advantages .advantages-swiper .swiper-slide .advantages-card .title {
+  color: #fff;
+}
+.dark-theme .technology {
+  padding: 100px 0;
+  background: var(--dark-color);
+}
+.dark-theme .technology .technology-wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.dark-theme .technology .technology-wrap .technology-arrow {
+  cursor: pointer;
+}
+.dark-theme .technology .technology-wrap .technology-arrow svg path {
+  fill: var(--dark-bg);
+}
+.dark-theme .technology .technology-wrap .technology-arrow svg path:last-child {
+  stroke: #FFFFFF;
+}
+.dark-theme .technology .technology-wrap .technology-swiper {
+  width: calc(100% - 80px - 100px);
+}
+@media (max-width: 1230px) {
+  .dark-theme .technology .technology-wrap .technology-swiper {
+    width: 100%;
+  }
+}
+.dark-theme .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: #FFF;
+  height: 80px;
+}
+.dark-theme .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.windows {
+  border-radius: 15px;
+  background: #0DADEA;
+}
+.dark-theme .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.kaspersky {
+  border-radius: 15px;
+  background: #006D5C;
+}
+.dark-theme .technology .technology-wrap .technology-swiper .swiper-scrollbar {
+  position: static;
+  margin-top: 30px;
+  display: none;
+}
+@media (max-width: 1230px) {
+  .dark-theme .technology .technology-wrap .technology-swiper .swiper-scrollbar {
+    display: block;
+  }
+}
+.dark-theme .technology .technology-wrap .technology-swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  border-radius: 10px;
+  background: var(--brand-color);
+  height: 2px;
+}
 
 /*# sourceMappingURL=dark-theme.css.map */

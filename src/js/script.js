@@ -161,3 +161,102 @@ if (mainSwiperMobile) {
         },
     });
 }
+
+const productSlider = document.querySelector('.products-slider');
+
+
+if (productSlider) {
+    const swiperProducts = new Swiper(productSlider, {
+        loop: true,
+        slidesPerView:1,
+        spaceBetween: 20,
+        breakpoints: {
+            360: {
+                slidesPerView: 1.2,
+            },
+            390: {
+                slidesPerView: 1.3,
+            },
+            450: {
+                slidesPerView: 1.5,
+            },
+            580:{
+                slidesPerView: 2,
+            },
+            720: {
+                slidesPerView: 2.5,
+            },
+            858 : {
+                slidesPerView:3,
+            },
+            1000: {
+                slidesPerView: 3.5,
+            },
+            1145: {
+                slidesPerView: 4,
+            },
+            1288: {
+                slidesPerView: 4.5,
+            },
+            1408: {
+                slidesPerView:5
+            }
+        }
+
+    });
+}
+
+const advantagesSlider = document.querySelector('.advantages-swiper');
+
+if (advantagesSlider) {
+    const swiperAdv = new Swiper(advantagesSlider, {
+        loop: true,
+        slidesPerView:1,
+        spaceBetween: 20,
+        breakpoints: {
+            580:{
+                slidesPerView: 2,
+            },
+            858 : {
+                slidesPerView:3,
+            },
+            1145: {
+                slidesPerView: 4,
+            },
+        },
+        pagination: {
+            el: '.advantages-swiper .custom-swiper-pagination',
+            clickable: true
+        }
+
+    });
+}
+
+const technologySlider = document.querySelector('.technology-swiper');
+
+if (technologySlider) {
+    const swiperAdv = new Swiper(technologySlider, {
+        loop: true,
+        slidesPerView:1,
+        spaceBetween: 20,
+        breakpoints: {
+            580:{
+                slidesPerView: 2,
+            },
+            858 : {
+                slidesPerView:3,
+            },
+            1145: {
+                slidesPerView: 4,
+            },
+        },
+        navigation: {
+            nextEl: '.technology-wrap .technology-next',
+            prevEl: '.technology-wrap .technology-prev',
+        },
+        scrollbar: {
+            el: ".technology-wrap .swiper-scrollbar",
+        },
+
+    });
+}
