@@ -66,8 +66,8 @@ body {
   transition: 0.3s ease; }
 
 .content {
-  max-width: calc(1440px + 16px * 2);
-  padding: 0 16px;
+  max-width: calc(1440px + 20px * 2);
+  padding: 0 20px;
   margin: 0 auto;
   width: 100%; }
 
@@ -361,7 +361,7 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 13;
+        z-index: 15;
         width: 350px; }
         .header .header-nav .content .catalog-btn .submenu-container .submenu-lists {
           position: relative;
@@ -378,11 +378,13 @@ body {
             .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1 {
               transform: scale(0);
               opacity: 0;
-              visibility: hidden; }
+              visibility: hidden;
+              height: 0; }
               .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1.open {
                 transform: scale(1);
                 opacity: 1;
-                visibility: visible; }
+                visibility: visible;
+                height: auto; }
             .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li {
               width: 100%; }
               .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li a {
@@ -870,5 +872,258 @@ body {
 
 .main-banner {
   padding: 50px 0; }
+  @media (max-width: 768px) {
+    .main-banner {
+      display: none; } }
+  .main-banner .content .banner-swiper-container .swiper-block {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    border-radius: 5px 5px 0px 0px;
+    background: #E2E2E2; }
+    .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper {
+      width: 100%;
+      border-radius: 5px 5px 0px 0px;
+      height: 100%; }
+      .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide {
+        position: relative;
+        border-radius: 5px 5px 0px 0px;
+        overflow: hidden; }
+        .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+        .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          display: flex;
+          width: 474px;
+          padding: 0px 50px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex-shrink: 0;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='475' height='240' viewBox='0 0 475 240' fill='none'%3E%3Cpath d='M0 0H474.5L413.5 240H0V0Z' fill='%232E3441'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: cover; }
+          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info h2 {
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 50px;
+            margin: 0;
+            padding: 0; }
+          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info span {
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 20px; }
+          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p {
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 20px; }
+            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p.colored {
+              color: #24C062;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal; }
+          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button {
+            display: flex;
+            padding: 10px 20px;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            background: var(--brand-color);
+            border: none;
+            cursor: pointer; }
+            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button span {
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              margin: 0; }
+    .main-banner .content .banner-swiper-container .swiper-block .banner-arrow {
+      cursor: pointer; }
+      .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        z-index: 13;
+        transform: translate(-50%, -50%); }
+        .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path {
+          fill: var(--brand-color); }
+          .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path:last-child {
+            stroke: #FFFFFF; }
+      .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        z-index: 13;
+        transform: translate(50%, -50%); }
+        .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path {
+          fill: var(--brand-color); }
+          .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path:last-child {
+            stroke: #FFFFFF; }
+  .main-banner .content .banner-swiper-container .main-banner-pagination {
+    display: flex;
+    gap: 5px;
+    align-items: center; }
+    .main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet {
+      display: flex;
+      padding: 10px 15px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 0px 0px 5px 5px;
+      color: #2E3441;
+      font-family: "Myriad Pro";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      /* 12px */
+      cursor: pointer; }
+      .main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet.active {
+        color: #EEF2FA;
+        font-family: "Myriad Pro";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        /* 12px */
+        display: flex;
+        padding: 10px 15px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 0px 0px 5px 5px;
+        background: #2E3441; }
+
+.main-banner-mobile {
+  display: flex;
+  padding: 30px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--dark-color);
+  display: none; }
+  @media (max-width: 768px) {
+    .main-banner-mobile {
+      display: flex; } }
+  .main-banner-mobile .main-banner-mobile-swiper {
+    width: 100%; }
+    .main-banner-mobile .main-banner-mobile-swiper .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; }
+      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image {
+        height: 226px;
+        border-radius: 15px;
+        overflow: hidden; }
+        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover; }
+      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide h2 {
+        color: #FFF;
+        font-family: "Myriad Pro";
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px;
+        margin: 0;
+        padding: 0; }
+      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide span {
+        color: #FFF;
+        font-family: "Myriad Pro";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal; }
+      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide p {
+        color: #FFF;
+        font-family: "Myriad Pro";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal; }
+        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide p.colored {
+          color: #24C062;
+          font-family: "Myriad Pro";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal; }
+      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide button {
+        display: flex;
+        padding: 10px 20px;
+        align-items: center;
+        gap: 10px;
+        border-radius: 10px;
+        background: var(--brand-color);
+        border: none;
+        cursor: pointer;
+        justify-content: center; }
+        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide button span {
+          color: #FFF;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0; }
+    .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination {
+      margin-top: 30px; }
+      .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+        background: #626C81;
+        border-radius: 50px; }
+        .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background: #fff; }
+
+.chapter {
+  padding: 15px 0; }
+  .chapter .content {
+    display: flex;
+    gap: 10px;
+    align-items: center; }
+    .chapter .content p {
+      color: #D7DFF0;
+      text-align: center;
+      font-family: "Myriad Pro";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 100%;
+      /* 30px */
+      text-transform: uppercase; }
+    .chapter .content .line {
+      flex-grow: 1;
+      height: 1px;
+      background: #D7DFF0; }
+
+.product-card {
+  display: flex;
+  width: 270px;
+  padding: 50px 30px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  border-radius: 15px;
+  background: #FFF; }
 
 /*# sourceMappingURL=style.css.map */

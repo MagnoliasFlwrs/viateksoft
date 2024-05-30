@@ -78,3 +78,86 @@ backBtns.forEach(el=> {
         droprightScreen.classList.remove('active');
     })
 })
+
+
+const mainSwiper = document.querySelector('.main-banner-swiper');
+const mainSwiperMobile = document.querySelector('.main-banner-mobile-swiper');
+
+const customPagination = document.querySelectorAll('.main-banner-pagination');
+
+customPagination.forEach(el => {
+    let bullets = el.querySelectorAll('.pagination-bullet');
+
+    function clearBulletsClass() {
+        bullets.forEach(el=> {
+            el.classList.remove('active')
+        })
+    }
+    bullets.forEach((bull , i) => {
+        bull.addEventListener('click' , (e)=> {
+            clearBulletsClass()
+            mainPageSwiper.slideTo(i);
+        })
+    })
+})
+
+const mainPageSwiper = new Swiper(mainSwiper, {
+    loop: true,
+    on: {
+        slideNextTransitionEnd: function (swiper) {
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            const previousActiveLink = activeSlide.querySelector(".active");
+            if (previousActiveLink) {
+                previousActiveLink.classList.remove("active");
+            }
+            customPagination.forEach(el => {
+                let bullets = el.querySelectorAll('.pagination-bullet');
+
+                function clearBulletsClass() {
+                    bullets.forEach(el=> {
+                        el.classList.remove('active')
+                    })
+                }
+                clearBulletsClass()
+            })
+            const paginationBulletSlide = activeSlide.closest('.banner-swiper-container').querySelector(`.pagination-bullet-${swiper.realIndex}`);
+            console.log(swiper.realIndex)
+            paginationBulletSlide.classList.add("active");
+
+        },
+        slidePrevTransitionEnd: function (swiper) {
+            const activeSlide = swiper.slides[swiper.activeIndex];
+            const previousActiveLink = activeSlide.querySelector(".active");
+            if (previousActiveLink) {
+                previousActiveLink.classList.remove("active");
+            }
+            customPagination.forEach(el => {
+                let bullets = el.querySelectorAll('.pagination-bullet');
+
+                function clearBulletsClass() {
+                    bullets.forEach(el=> {
+                        el.classList.remove('active')
+                    })
+                }
+                clearBulletsClass()
+            })
+            const paginationBulletSlide = activeSlide.closest('.banner-swiper-container').querySelector(`.pagination-bullet-${swiper.realIndex}`);
+            console.log(swiper.realIndex)
+            paginationBulletSlide.classList.add("active");
+        },
+    },
+    navigation: {
+        nextEl: '.swiper-block .main-banner-next',
+        prevEl: '.swiper-block .main-banner-prev',
+    },
+});
+
+if (mainSwiperMobile) {
+    const swiper = new Swiper(mainSwiperMobile, {
+        loop: true,
+        pagination: {
+            el: '.main-banner-mobile-swiper .custom-swiper-pagination',
+            clickable:true
+        },
+    });
+}
