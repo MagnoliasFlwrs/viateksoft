@@ -512,59 +512,53 @@
           }
           .catalog-item-accordeon {
             display: none;
+            @media (max-width: 768px) {
+              display: block;
+            }
             .box {
               position: relative;
-              margin-bottom: 20px;
+              border-radius: 15px;
+              background: var(--dark-color);
               &.active {
                 .label {
                   &::after {
-                    content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12.5 15L18 10' stroke='%23e37639'%3E%3C/path%3E%3Cpath d='M7 10L12.5 15L18 10' stroke='%23e37639' stroke-width='2.57143'%3E%3C/path%3E%3C/svg%3E");
-                    stroke: #e37639;
-                    position: absolute;
-                    top: 50%;
-                    -webkit-transition: -webkit-transform .3s;
-                    transition: -webkit-transform .3s;
-                    transition: transform .3s;
-                    transition: transform .3s,-webkit-transform .3s;
-                    -webkit-transform: rotate(180deg);
                     transform:translateY(-50%) rotate(180deg);
-                    right: 20px;
-                    font-size: 25px;
-                    font-weight: bold;
                   }
                 }
               }
               .label {
-                position: relative;
-                color: #66727d;
-                font-weight: 700;
-                font-size: 16px;
-                line-height: 1;
-                background-color: transparent;
-                border-bottom: 1px solid #f5f5f5 ;
-                cursor: pointer;
-                padding: 25px;
+                color: #fff;
+
                 &::after {
-                  content: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10L12.5 15L18 10' stroke='%234C5865'%3E%3C/path%3E%3Cpath d='M7 10L12.5 15L18 10' stroke='%234C5865' stroke-width='2.57143'%3E%3C/path%3E%3C/svg%3E");
-                  position: absolute;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  right: 20px;
-                  font-size: 25px;
-                  font-weight: bold;
+                  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z' fill='%23ffffff'/%3E%3C/svg%3E");
                 }
               }
               .content {
-                position: relative;
-                background-color: #fff;
-                overflow: hidden;
-                max-height: 0;
-                transition: 0.3s;
+                background-color: var(--dark-color);
+                ul {
+
+                  li {
+                    width: 100%;
+                    a {
+                      color: #fff;
+                    }
+                  }
+                }
               }
             }
           }
         }
 
+      }
+    }
+  }
+  .breadcrumbs {
+    ul {
+      li {
+        color: #AFB7C9;
+        a {
+          color: #FFFFFF;
+        }
       }
     }
   }
