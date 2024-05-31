@@ -2,7 +2,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: .3s ease; }
+  transition: 0.3s ease;
+}
 
 :root {
   --brand-color: #2454C0;
@@ -11,48 +12,57 @@
   --red-color: #F00;
   --light-bg: #EEF2FA;
   --dark-bg: #1F232B;
-  --light-blue: #C5D7FF; }
+  --light-blue: #C5D7FF;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 ul, li {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 @font-face {
   font-family: "Myriad Pro";
   src: url(./src/fonts/MyriadPro-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
-  font-display: swap; }
+  font-display: swap;
+}
 @font-face {
   font-family: "Myriad Pro";
   src: url(./src/fonts/MyriadPro-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
-  font-display: swap; }
+  font-display: swap;
+}
 @font-face {
   font-family: "Myriad Pro";
   src: url(./src/fonts/MyriadPro-Semibold.ttf) format("truetype");
   font-weight: 500;
   font-style: normal;
-  font-display: swap; }
+  font-display: swap;
+}
 @font-face {
   font-family: "Myriad Pro";
   src: url(./src/fonts/MyriadPro-Semibold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
-  font-display: swap; }
+  font-display: swap;
+}
 @font-face {
   font-family: "Myriad Pro";
   src: url(./src/fonts/MyriadPro-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
-  font-display: swap; }
+  font-display: swap;
+}
 html {
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Myriad Pro";
@@ -63,13 +73,15 @@ body {
   font-weight: 400;
   line-height: normal;
   position: relative;
-  transition: 0.3s ease; }
+  transition: 0.3s ease;
+}
 
 .content {
-  max-width: calc(1440px + 20px * 2);
+  max-width: 1480px;
   padding: 0 20px;
   margin: 0 auto;
-  width: 100%; }
+  width: 100%;
+}
 
 .overlay {
   position: fixed;
@@ -80,13 +92,16 @@ body {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 12;
   display: none;
-  transition: all .5s ease;
-  padding: 0 25px; }
-  .overlay.open {
-    display: block; }
+  transition: all 0.5s ease;
+  padding: 0 25px;
+}
+.overlay.open {
+  display: block;
+}
 
 .light-theme {
-  background: var(--light-bg); }
+  background: var(--light-bg);
+}
 
 .header .theme-row {
   display: flex;
@@ -97,222 +112,272 @@ body {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 0px 0px 5px 5px;
-  background: var(--dark-color); }
-  @media (max-width: 1100px) {
-    .header .theme-row {
-      display: none; } }
-  .header .theme-row .content {
-    display: flex;
-    gap: 30px;
-    justify-content: flex-end; }
-    .header .theme-row .content .switch-theme {
-      display: flex;
-      gap: 10px;
-      align-items: center; }
-      .header .theme-row .content .switch-theme .light-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .header .theme-row .content .switch-theme .light-icon svg path {
-          transition: .3s ease; }
-        .header .theme-row .content .switch-theme .light-icon.active svg path {
-          stroke: #fff; }
-      .header .theme-row .content .switch-theme .switch {
-        position: relative;
-        display: inline-block;
-        width: 33px;
-        height: 16px;
-        flex-shrink: 0; }
-      .header .theme-row .content .switch-theme .switch input {
-        display: none; }
-      .header .theme-row .content .switch-theme .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--brand-color);
-        -webkit-transition: .4s;
-        transition: .4s; }
-      .header .theme-row .content .switch-theme .slider:before {
-        position: absolute;
-        content: "";
-        height: 12px;
-        width: 12px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s; }
-      .header .theme-row .content .switch-theme input:checked + .slider {
-        background-color: var(--brand-color); }
-      .header .theme-row .content .switch-theme input:focus + .slider {
-        box-shadow: 0 0 1px #EBEBEB; }
-      .header .theme-row .content .switch-theme input:checked + .slider:before {
-        -webkit-transform: translateX(15px);
-        -ms-transform: translateX(15px);
-        transform: translateX(15px); }
-      .header .theme-row .content .switch-theme .slider.round {
-        border-radius: 34px; }
-      .header .theme-row .content .switch-theme .slider.round:before {
-        border-radius: 50%; }
-      .header .theme-row .content .switch-theme .dark-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .header .theme-row .content .switch-theme .dark-icon svg path {
-          transition: .3s ease; }
-        .header .theme-row .content .switch-theme .dark-icon.active svg path {
-          stroke: #fff; }
-    .header .theme-row .content .line {
-      width: 1px;
-      height: 14px;
-      background: #626C81;
-      flex-shrink: 0; }
-    .header .theme-row .content p {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #FFF;
-      text-align: right;
-      font-family: "Myriad Pro";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal; }
-      .header .theme-row .content p a {
-        color: #FFF;
-        text-align: right;
-        font-family: "Myriad Pro";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal; }
+  background: var(--dark-color);
+}
+@media (max-width: 1100px) {
+  .header .theme-row {
+    display: none;
+  }
+}
+.header .theme-row .content {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+}
+.header .theme-row .content .switch-theme {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header .theme-row .content .switch-theme .light-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .theme-row .content .switch-theme .light-icon svg path {
+  transition: 0.3s ease;
+}
+.header .theme-row .content .switch-theme .light-icon.active svg path {
+  stroke: #fff;
+}
+.header .theme-row .content .switch-theme .switch {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.header .theme-row .content .switch-theme .switch input {
+  display: none;
+}
+.header .theme-row .content .switch-theme .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--brand-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.header .theme-row .content .switch-theme .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.header .theme-row .content .switch-theme input:checked + .slider {
+  background-color: var(--brand-color);
+}
+.header .theme-row .content .switch-theme input:focus + .slider {
+  box-shadow: 0 0 1px #EBEBEB;
+}
+.header .theme-row .content .switch-theme input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.header .theme-row .content .switch-theme .slider.round {
+  border-radius: 34px;
+}
+.header .theme-row .content .switch-theme .slider.round:before {
+  border-radius: 50%;
+}
+.header .theme-row .content .switch-theme .dark-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .theme-row .content .switch-theme .dark-icon svg path {
+  transition: 0.3s ease;
+}
+.header .theme-row .content .switch-theme .dark-icon.active svg path {
+  stroke: #fff;
+}
+.header .theme-row .content .line {
+  width: 1px;
+  height: 14px;
+  background: #626C81;
+  flex-shrink: 0;
+}
+.header .theme-row .content p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFF;
+  text-align: right;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .theme-row .content p a {
+  color: #FFF;
+  text-align: right;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 .header .header-contacts-row {
   padding: 38px 0;
-  transition: .3s ease; }
-  @media (max-width: 1100px) {
-    .header .header-contacts-row {
-      display: none; } }
-  .header .header-contacts-row .content {
-    display: flex;
+  transition: 0.3s ease;
+}
+@media (max-width: 1100px) {
+  .header .header-contacts-row {
+    display: none;
+  }
+}
+.header .header-contacts-row .content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-contacts-row .content .line {
+  width: 1px;
+  height: 72px;
+  background: #E2E2E2;
+  flex-shrink: 0;
+}
+.header .header-contacts-row .content .slogan {
+  color: var(--dark-color);
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header .header-contacts-row .content .label {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: var(--red-color);
+}
+.header .header-contacts-row .content .label span {
+  width: 170px;
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1288px) {
+  .header .header-contacts-row .content .label span {
+    width: unset;
+  }
+}
+.header .header-contacts-row .content .time-label {
+  display: flex;
+  padding: 10px 15px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(46, 52, 65, 0.08);
+}
+@media (max-width: 1288px) {
+  .header .header-contacts-row .content .time-label {
+    padding: 10px;
     gap: 10px;
-    align-items: center;
-    justify-content: space-between; }
-    .header .header-contacts-row .content .line {
-      width: 1px;
-      height: 72px;
-      background: #E2E2E2;
-      flex-shrink: 0; }
-    .header .header-contacts-row .content .slogan {
-      color: var(--dark-color);
-      font-family: "Myriad Pro";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      text-transform: uppercase; }
-    .header .header-contacts-row .content .label {
-      display: flex;
-      padding: 10px 15px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 5px;
-      background: var(--red-color); }
-      .header .header-contacts-row .content .label span {
-        width: 170px;
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase; }
-        @media (max-width: 1288px) {
-          .header .header-contacts-row .content .label span {
-            width: unset; } }
-    .header .header-contacts-row .content .time-label {
-      display: flex;
-      padding: 10px 15px;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 20px;
-      border-radius: 5px;
-      border: 1px solid rgba(46, 52, 65, 0.08); }
-      @media (max-width: 1288px) {
-        .header .header-contacts-row .content .time-label {
-          padding: 10px;
-          gap: 10px; } }
-      @media (max-width: 1230px) {
-        .header .header-contacts-row .content .time-label {
-          flex-direction: column; } }
-      .header .header-contacts-row .content .time-label p {
-        color: #2E3441;
-        font-family: "Myriad Pro";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal; }
-        .header .header-contacts-row .content .time-label p:first-child span {
-          color: var(--green-color);
-          font-family: "Myriad Pro";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal;
-          text-transform: uppercase; }
-        .header .header-contacts-row .content .time-label p:last-child span {
-          color: #2E3441;
-          font-family: "Myriad Pro";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 600;
-          line-height: normal; }
-    .header .header-contacts-row .content .callback {
-      display: flex;
-      padding: 10px 20px;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer; }
-      @media (max-width: 1288px) {
-        .header .header-contacts-row .content .callback {
-          padding: 10px; } }
-      .header .header-contacts-row .content .callback span {
-        color: var(--dark-color);
-        font-family: "Myriad Pro";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal; }
-    .header .header-contacts-row .content .header-phone {
-      color: var(--dark-color);
-      font-family: "Myriad Pro";
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      white-space: nowrap; }
-      @media (max-width: 1288px) {
-        .header .header-contacts-row .content .header-phone {
-          font-size: 20px; } }
-    .header .header-contacts-row .content .cart-btn {
-      cursor: pointer;
-      display: flex;
-      padding: 10px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: var(--brand-color);
-      position: relative; }
-      .header .header-contacts-row .content .cart-btn .not-empty {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50px;
-        background: var(--red-color);
-        right: 9px;
-        top: 10px; }
+  }
+}
+@media (max-width: 1230px) {
+  .header .header-contacts-row .content .time-label {
+    flex-direction: column;
+  }
+}
+.header .header-contacts-row .content .time-label p {
+  color: #2E3441;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .header-contacts-row .content .time-label p:first-child span {
+  color: var(--green-color);
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header .header-contacts-row .content .time-label p:last-child span {
+  color: #2E3441;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.header .header-contacts-row .content .callback {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+@media (max-width: 1288px) {
+  .header .header-contacts-row .content .callback {
+    padding: 10px;
+  }
+}
+.header .header-contacts-row .content .callback span {
+  color: var(--dark-color);
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .header-contacts-row .content .header-phone {
+  color: var(--dark-color);
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+@media (max-width: 1288px) {
+  .header .header-contacts-row .content .header-phone {
+    font-size: 20px;
+  }
+}
+.header .header-contacts-row .content .cart-btn {
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--brand-color);
+  position: relative;
+}
+.header .header-contacts-row .content .cart-btn .not-empty {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: var(--red-color);
+  right: 9px;
+  top: 10px;
+}
 .header .header-nav {
   display: flex;
   height: 84px;
@@ -322,314 +387,378 @@ body {
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 0px 0px 5px 5px;
-  background: linear-gradient(90deg, #2E3441 -22.16%, #2454C0 17.76%, #2454C0 56.58%, #24C062 117.92%); }
-  @media (max-width: 1100px) {
-    .header .header-nav {
-      display: none; } }
+  background: linear-gradient(90deg, #2E3441 -22.16%, #2454C0 17.76%, #2454C0 56.58%, #24C062 117.92%);
+}
+@media (max-width: 1100px) {
+  .header .header-nav {
+    display: none;
+  }
+}
+.header .header-nav .content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+@media (max-width: 1328px) {
   .header .header-nav .content {
-    display: flex;
-    gap: 20px;
-    align-items: center; }
-    @media (max-width: 1328px) {
-      .header .header-nav .content {
-        gap: 10px; } }
-    .header .header-nav .content .catalog-btn {
-      display: flex;
-      padding: 10px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: #FFF;
-      cursor: pointer;
-      position: relative; }
-      .header .header-nav .content .catalog-btn span {
-        display: block;
-        padding: 0;
-        margin: 0;
-        color: var(--brand-color);
-        font-family: "Myriad Pro";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase; }
-        @media (max-width: 1226px) {
-          .header .header-nav .content .catalog-btn span {
-            font-size: 12px; } }
-      .header .header-nav .content .catalog-btn .submenu-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 15;
-        width: 350px; }
-        .header .header-nav .content .catalog-btn .submenu-container .submenu-lists {
-          position: relative;
-          width: 100%; }
-          .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            align-items: flex-start;
-            gap: 10px;
-            border-radius: 15px;
-            background: #FAFBFF;
-            width: 100%; }
-            .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1 {
-              transform: scale(0);
-              opacity: 0;
-              visibility: hidden;
-              height: 0; }
-              .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1.open {
-                transform: scale(1);
-                opacity: 1;
-                visibility: visible;
-                height: auto; }
-            .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li {
-              width: 100%; }
-              .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li.header-dropright .dropright-link::after {
-                content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='%232E3441'/%3E%3C/svg%3E");
-                display: block; }
-              .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li.header-dropright .dropright-link:hover::after {
-                content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='%232454C0'/%3E%3C/svg%3E");
-                display: block; }
-              .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li a {
-                width: 100%;
-                display: flex;
-                padding: 10px;
-                justify-content: space-between;
-                align-items: center;
-                gap: 10px;
-                align-self: stretch;
-                color: var(--dark-color);
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                transition: .3s ease; }
-                .header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li a:hover {
-                  text-decoration-line: underline; }
-          .header .header-nav .content .catalog-btn .submenu-container .submenu-lists .submenu-list-2 {
-            position: absolute;
-            left: 100%;
-            top: 0;
-            height: 100%;
-            transform: scale(0);
-            opacity: 0;
-            visibility: hidden;
-            z-index: 13;
-            margin-left: 20px; }
-            .header .header-nav .content .catalog-btn .submenu-container .submenu-lists .submenu-list-2.open {
-              transform: scale(1);
-              opacity: 1;
-              visibility: visible; }
-    .header .header-nav .content ul {
-      display: flex;
-      align-items: center; }
-      .header .header-nav .content ul li a {
-        display: flex;
-        padding: 0px 20px;
-        align-items: center;
-        gap: 20px;
-        align-self: stretch;
-        color: var(--light-blue);
-        font-family: "Myriad Pro";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase; }
-        @media (max-width: 1328px) {
-          .header .header-nav .content ul li a {
-            padding: 0px 10px; } }
-        @media (max-width: 1226px) {
-          .header .header-nav .content ul li a {
-            font-size: 12px; } }
-    .header .header-nav .content .search {
-      flex-grow: 1;
-      position: relative; }
-      .header .header-nav .content .search input {
-        display: flex;
-        width: 100%;
-        height: 44px;
-        padding: 10px 54px 10px 20px;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-        flex: 1 0 0;
-        border-radius: 10px;
-        border: 1px solid rgba(197, 215, 255, 0.24);
-        outline: none;
-        background: transparent; }
-        .header .header-nav .content .search input::placeholder {
-          color: var(--light-blue);
-          font-family: "Myriad Pro";
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          text-align: right; }
-          @media (max-width: 1226px) {
-            .header .header-nav .content .search input::placeholder {
-              font-size: 12px; } }
-      .header .header-nav .content .search .search-btn {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-    .header .header-nav .content .order-status {
-      cursor: pointer;
-      display: flex;
-      height: 44px;
-      padding: 10px 20px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      border: 1px solid rgba(197, 215, 255, 0.24);
-      background: transparent; }
-      .header .header-nav .content .order-status span {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase; }
-        @media (max-width: 1226px) {
-          .header .header-nav .content .order-status span {
-            font-size: 12px; } }
+    gap: 10px;
+  }
+}
+.header .header-nav .content .catalog-btn {
+  display: flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #FFF;
+  cursor: pointer;
+  position: relative;
+}
+.header .header-nav .content .catalog-btn span {
+  display: block;
+  padding: 0;
+  margin: 0;
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1226px) {
+  .header .header-nav .content .catalog-btn span {
+    font-size: 12px;
+  }
+}
+.header .header-nav .content .catalog-btn .submenu-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  width: 350px;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists {
+  position: relative;
+  width: 100%;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 15px;
+  background: #FAFBFF;
+  width: 100%;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1 {
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul.submenu-list-1.open {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li {
+  width: 100%;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li.header-dropright .dropright-link::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='%232E3441'/%3E%3C/svg%3E");
+  display: block;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li.header-dropright .dropright-link:hover::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='%232454C0'/%3E%3C/svg%3E");
+  display: block;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li a {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  color: var(--dark-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s ease;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists ul li a:hover {
+  text-decoration-line: underline;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists .submenu-list-2 {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  transform: scale(0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 13;
+  margin-left: 20px;
+}
+.header .header-nav .content .catalog-btn .submenu-container .submenu-lists .submenu-list-2.open {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+.header .header-nav .content ul {
+  display: flex;
+  align-items: center;
+}
+.header .header-nav .content ul li a {
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  color: var(--light-blue);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1328px) {
+  .header .header-nav .content ul li a {
+    padding: 0px 10px;
+  }
+}
+@media (max-width: 1226px) {
+  .header .header-nav .content ul li a {
+    font-size: 12px;
+  }
+}
+.header .header-nav .content .search {
+  flex-grow: 1;
+  position: relative;
+}
+.header .header-nav .content .search input {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  padding: 10px 54px 10px 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 215, 255, 0.24);
+  outline: none;
+  background: transparent;
+}
+.header .header-nav .content .search input::placeholder {
+  color: var(--light-blue);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+}
+@media (max-width: 1226px) {
+  .header .header-nav .content .search input::placeholder {
+    font-size: 12px;
+  }
+}
+.header .header-nav .content .search .search-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .header-nav .content .order-status {
+  cursor: pointer;
+  display: flex;
+  height: 44px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 215, 255, 0.24);
+  background: transparent;
+}
+.header .header-nav .content .order-status span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1226px) {
+  .header .header-nav .content .order-status span {
+    font-size: 12px;
+  }
+}
 .header .mobile-header {
-  display: none; }
-  @media (max-width: 1100px) {
-    .header .mobile-header {
-      display: block; } }
-  .header .mobile-header .burger-row {
-    display: flex;
-    padding: 15px 20px;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
-    align-self: stretch;
-    background: linear-gradient(90deg, #2E3441 -9.46%, #2454C0 45.48%, #24C062 112.38%); }
-    .header .mobile-header .burger-row .order-status {
-      display: flex;
-      padding: 10px 15px;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      flex: 1 0 0;
-      align-self: stretch;
-      border-radius: 10px;
-      border: 1px solid rgba(197, 215, 255, 0.24);
-      background: #24C062; }
-      .header .mobile-header .burger-row .order-status span {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        text-transform: uppercase; }
-    .header .mobile-header .burger-row .cart-btn {
-      cursor: pointer;
-      display: flex;
-      padding: 10px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 10px;
-      background: var(--white);
-      position: relative; }
-      .header .mobile-header .burger-row .cart-btn .not-empty {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50px;
-        background: var(--red-color);
-        right: 9px;
-        top: 10px; }
-  .header .mobile-header .logo-row {
-    display: flex;
-    padding: 20px;
-    align-items: center;
-    gap: 20px;
-    align-self: stretch;
-    justify-content: space-between; }
-    .header .mobile-header .logo-row .info {
-      display: flex;
-      flex-direction: column; }
-      .header .mobile-header .logo-row .info .header-phone {
-        color: var(--dark-color);
-        font-family: "Myriad Pro";
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-        white-space: nowrap; }
-        @media (max-width: 1288px) {
-          .header .mobile-header .logo-row .info .header-phone {
-            font-size: 20px; } }
-      .header .mobile-header .logo-row .info .label {
-        display: flex;
-        padding: 10px 15px;
-        align-items: center;
-        gap: 10px;
-        border-radius: 5px;
-        background: transparent; }
-        @media (max-width: 416px) {
-          .header .mobile-header .logo-row .info .label {
-            padding: 10px 0; } }
-        .header .mobile-header .logo-row .info .label span {
-          color: var(--red-color);
-          font-family: "Myriad Pro";
-          font-size: 12px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase; }
-          @media (max-width: 1288px) {
-            .header .mobile-header .logo-row .info .label span {
-              width: unset; } }
-  .header .mobile-header .search-row {
-    padding: 0 20px 20px; }
-    .header .mobile-header .search-row .search {
-      flex-grow: 1;
-      position: relative; }
-      .header .mobile-header .search-row .search input {
-        display: flex;
-        width: 100%;
-        height: 44px;
-        padding: 10px 54px 10px 20px;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 10px;
-        flex: 1 0 0;
-        border-radius: 10px;
-        border: 1px solid #AFB7C9;
-        outline: none;
-        background: transparent; }
-        .header .mobile-header .search-row .search input::placeholder {
-          color: var(--dark-color);
-          font-family: "Myriad Pro";
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          text-align: right; }
-          @media (max-width: 1226px) {
-            .header .mobile-header .search-row .search input::placeholder {
-              font-size: 12px; } }
-      .header .mobile-header .search-row .search .search-btn {
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-        display: flex;
-        align-items: center;
-        justify-content: center; }
+  display: none;
+}
+@media (max-width: 1100px) {
+  .header .mobile-header {
+    display: block;
+  }
+}
+.header .mobile-header .burger-row {
+  display: flex;
+  padding: 15px 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  background: linear-gradient(90deg, #2E3441 -9.46%, #2454C0 45.48%, #24C062 112.38%);
+}
+.header .mobile-header .burger-row .order-status {
+  display: flex;
+  padding: 10px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid rgba(197, 215, 255, 0.24);
+  background: #24C062;
+}
+.header .mobile-header .burger-row .order-status span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header .mobile-header .burger-row .cart-btn {
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--white);
+  position: relative;
+}
+.header .mobile-header .burger-row .cart-btn .not-empty {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  background: var(--red-color);
+  right: 9px;
+  top: 10px;
+}
+.header .mobile-header .logo-row {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  justify-content: space-between;
+}
+.header .mobile-header .logo-row .info {
+  display: flex;
+  flex-direction: column;
+}
+.header .mobile-header .logo-row .info .header-phone {
+  color: var(--dark-color);
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  white-space: nowrap;
+}
+@media (max-width: 1288px) {
+  .header .mobile-header .logo-row .info .header-phone {
+    font-size: 20px;
+  }
+}
+.header .mobile-header .logo-row .info .label {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 5px;
+  background: transparent;
+}
+@media (max-width: 416px) {
+  .header .mobile-header .logo-row .info .label {
+    padding: 10px 0;
+  }
+}
+.header .mobile-header .logo-row .info .label span {
+  color: var(--red-color);
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+@media (max-width: 1288px) {
+  .header .mobile-header .logo-row .info .label span {
+    width: unset;
+  }
+}
+.header .mobile-header .search-row {
+  padding: 0 20px 20px;
+}
+.header .mobile-header .search-row .search {
+  flex-grow: 1;
+  position: relative;
+}
+.header .mobile-header .search-row .search input {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  padding: 10px 54px 10px 20px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  border-radius: 10px;
+  border: 1px solid #AFB7C9;
+  outline: none;
+  background: transparent;
+}
+.header .mobile-header .search-row .search input::placeholder {
+  color: var(--dark-color);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+}
+@media (max-width: 1226px) {
+  .header .mobile-header .search-row .search input::placeholder {
+    font-size: 12px;
+  }
+}
+.header .mobile-header .search-row .search .search-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header .mobile-menu {
   display: flex;
   width: 100%;
@@ -646,372 +775,438 @@ body {
   left: -2100px;
   opacity: 0;
   z-index: 3;
-  transition: .5s ease; }
-  .header .mobile-menu.active {
-    left: 0;
-    opacity: 1;
-    transition: .5s ease; }
-  .header .mobile-menu .close-row {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    gap: 33px;
-    align-items: center;
-    padding: 0 50px; }
-    .header .mobile-menu .close-row .switch-theme {
-      display: flex;
-      gap: 10px;
-      align-items: center; }
-      .header .mobile-menu .close-row .switch-theme .light-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .header .mobile-menu .close-row .switch-theme .light-icon svg path {
-          transition: .3s ease; }
-        .header .mobile-menu .close-row .switch-theme .light-icon.active svg path {
-          stroke: #fff; }
-      .header .mobile-menu .close-row .switch-theme .switch {
-        position: relative;
-        display: inline-block;
-        width: 33px;
-        height: 16px;
-        flex-shrink: 0; }
-      .header .mobile-menu .close-row .switch-theme .switch input {
-        display: none; }
-      .header .mobile-menu .close-row .switch-theme .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: var(--brand-color);
-        -webkit-transition: .4s;
-        transition: .4s; }
-      .header .mobile-menu .close-row .switch-theme .slider:before {
-        position: absolute;
-        content: "";
-        height: 12px;
-        width: 12px;
-        left: 2px;
-        bottom: 2px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s; }
-      .header .mobile-menu .close-row .switch-theme input:checked + .slider {
-        background-color: var(--brand-color); }
-      .header .mobile-menu .close-row .switch-theme input:focus + .slider {
-        box-shadow: 0 0 1px #EBEBEB; }
-      .header .mobile-menu .close-row .switch-theme input:checked + .slider:before {
-        -webkit-transform: translateX(15px);
-        -ms-transform: translateX(15px);
-        transform: translateX(15px); }
-      .header .mobile-menu .close-row .switch-theme .slider.round {
-        border-radius: 34px; }
-      .header .mobile-menu .close-row .switch-theme .slider.round:before {
-        border-radius: 50%; }
-      .header .mobile-menu .close-row .switch-theme .dark-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center; }
-        .header .mobile-menu .close-row .switch-theme .dark-icon svg path {
-          transition: .3s ease; }
-        .header .mobile-menu .close-row .switch-theme .dark-icon.active svg path {
-          stroke: #fff; }
-    .header .mobile-menu .close-row.close-row-inside {
-      justify-content: space-between;
-      align-items: center; }
-      .header .mobile-menu .close-row.close-row-inside .back {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        gap: 20px; }
-        .header .mobile-menu .close-row.close-row-inside .back::before {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M14.7071 19.2071C15.0976 18.8166 15.0976 18.1834 14.7071 17.7929L9.41421 12.5L14.7071 7.20711C15.0976 6.81658 15.0976 6.18342 14.7071 5.79289C14.3166 5.40237 13.6834 5.40237 13.2929 5.79289L7.29289 11.7929C6.90237 12.1834 6.90237 12.8166 7.29289 13.2071L13.2929 19.2071C13.6834 19.5976 14.3166 19.5976 14.7071 19.2071Z' fill='%23ffffff'/%3E%3C/svg%3E");
-          display: block;
-          margin-top: 8px; }
-    .header .mobile-menu .close-row .close-btn {
-      cursor: pointer; }
-  .header .mobile-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    padding: 0 50px;
-    width: 100%; }
-    .header .mobile-menu ul li a {
-      color: #FFF;
-      font-family: "Myriad Pro";
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      display: flex;
-      gap: 20px;
-      align-items: center; }
-      .header .mobile-menu ul li a::before {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
-        display: block; }
-      .header .mobile-menu ul li a.dropright::after {
-        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
-        display: block;
-        margin-top: 5px;
-        margin-left: auto; }
-    .header .mobile-menu ul li .screen {
-      display: flex;
-      width: 100%;
-      min-height: 100vh;
-      padding: 50px 0;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 50px;
-      background: var(--dark-color);
-      position: fixed;
-      top: 0;
-      left: -2100px;
-      opacity: 0;
-      z-index: 4;
-      height: 100%;
-      overflow-y: auto; }
-      .header .mobile-menu ul li .screen.active {
-        left: 0;
-        opacity: 1;
-        transition: .5s ease; }
-      .header .mobile-menu ul li .screen ul li a {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        display: flex;
-        gap: 20px;
-        align-items: center; }
-        .header .mobile-menu ul li .screen ul li a::before {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
-          display: block; }
-        .header .mobile-menu ul li .screen ul li a.dropright::after {
-          content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
-          display: block;
-          margin-top: 5px;
-          margin-left: auto; }
-  .header .mobile-menu .mobile-menu-line {
-    width: 100%;
-    height: 1px;
-    background: #626C81;
-    flex-shrink: 0;
-    margin-top: auto; }
-  .header .mobile-menu .mobile-contacts {
-    padding: 0 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .header .mobile-menu .mobile-contacts a::before {
-      content: none !important; }
-    .header .mobile-menu .mobile-contacts .text {
-      color: #A9AEB9;
-      font-family: "Myriad Pro";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin-bottom: 20px; }
-    .header .mobile-menu .mobile-contacts .header-phone {
-      color: #FFF;
-      font-family: "Myriad Pro";
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      margin-bottom: 50px; }
-    .header .mobile-menu .mobile-contacts .social {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 25px; }
-      .header .mobile-menu .mobile-contacts .social .callback {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer; }
-        @media (max-width: 1288px) {
-          .header .mobile-menu .mobile-contacts .social .callback {
-            padding: 10px; } }
-        .header .mobile-menu .mobile-contacts .social .callback span {
-          color: var(--white);
-          font-family: "Myriad Pro";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal; }
-    .header .mobile-menu .mobile-contacts .email {
-      width: 100%;
-      display: flex;
-      text-align: center;
-      color: #FFF;
-      text-align: right;
-      font-family: "Myriad Pro";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal; }
-      .header .mobile-menu .mobile-contacts .email a {
-        color: #FFF;
-        text-align: right;
-        font-family: "Myriad Pro";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal; }
+  transition: 0.5s ease;
+}
+.header .mobile-menu.active {
+  left: 0;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.header .mobile-menu .close-row {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 33px;
+  align-items: center;
+  padding: 0 50px;
+}
+.header .mobile-menu .close-row .switch-theme {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.header .mobile-menu .close-row .switch-theme .light-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .mobile-menu .close-row .switch-theme .light-icon svg path {
+  transition: 0.3s ease;
+}
+.header .mobile-menu .close-row .switch-theme .light-icon.active svg path {
+  stroke: #fff;
+}
+.header .mobile-menu .close-row .switch-theme .switch {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.header .mobile-menu .close-row .switch-theme .switch input {
+  display: none;
+}
+.header .mobile-menu .close-row .switch-theme .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--brand-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.header .mobile-menu .close-row .switch-theme .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.header .mobile-menu .close-row .switch-theme input:checked + .slider {
+  background-color: var(--brand-color);
+}
+.header .mobile-menu .close-row .switch-theme input:focus + .slider {
+  box-shadow: 0 0 1px #EBEBEB;
+}
+.header .mobile-menu .close-row .switch-theme input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+.header .mobile-menu .close-row .switch-theme .slider.round {
+  border-radius: 34px;
+}
+.header .mobile-menu .close-row .switch-theme .slider.round:before {
+  border-radius: 50%;
+}
+.header .mobile-menu .close-row .switch-theme .dark-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .mobile-menu .close-row .switch-theme .dark-icon svg path {
+  transition: 0.3s ease;
+}
+.header .mobile-menu .close-row .switch-theme .dark-icon.active svg path {
+  stroke: #fff;
+}
+.header .mobile-menu .close-row.close-row-inside {
+  justify-content: space-between;
+  align-items: center;
+}
+.header .mobile-menu .close-row.close-row-inside .back {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header .mobile-menu .close-row.close-row-inside .back::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' viewBox='0 0 24 25' fill='none'%3E%3Cpath d='M14.7071 19.2071C15.0976 18.8166 15.0976 18.1834 14.7071 17.7929L9.41421 12.5L14.7071 7.20711C15.0976 6.81658 15.0976 6.18342 14.7071 5.79289C14.3166 5.40237 13.6834 5.40237 13.2929 5.79289L7.29289 11.7929C6.90237 12.1834 6.90237 12.8166 7.29289 13.2071L13.2929 19.2071C13.6834 19.5976 14.3166 19.5976 14.7071 19.2071Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  display: block;
+  margin-top: 8px;
+}
+.header .mobile-menu .close-row .close-btn {
+  cursor: pointer;
+}
+.header .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 50px;
+  width: 100%;
+}
+.header .mobile-menu ul li a {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .mobile-menu ul li a::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
+  display: block;
+}
+.header .mobile-menu ul li a.dropright::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+}
+.header .mobile-menu ul li .screen {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  background: var(--dark-color);
+  position: fixed;
+  top: 0;
+  left: -2100px;
+  opacity: 0;
+  z-index: 4;
+  height: 100%;
+  overflow-y: auto;
+}
+.header .mobile-menu ul li .screen.active {
+  left: 0;
+  opacity: 1;
+  transition: 0.5s ease;
+}
+.header .mobile-menu ul li .screen ul li a {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.header .mobile-menu ul li .screen ul li a::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='24' viewBox='0 0 20 24' fill='none'%3E%3Cpath d='M8.76624 1.08253C9.01563 0.430571 9.64132 0 10.3394 0C11.52 0 12.3343 1.18325 11.9125 2.286L4.02064 22.9175C3.77126 23.5694 3.14556 24 2.44753 24C1.26686 24 0.452611 22.8167 0.874427 21.714L8.76624 1.08253Z' fill='%232454C0'/%3E%3Cpath d='M14.2004 0.590471C14.3364 0.234856 14.6777 0 15.0584 0C15.7024 0 16.1466 0.645411 15.9165 1.24691L7.43898 23.4095C7.30295 23.7651 6.96166 24 6.58092 24C5.93692 24 5.49278 23.3546 5.72286 22.7531L14.2004 0.590471Z' fill='%23839DD8'/%3E%3Cpath d='M18.9035 0.295236C18.9715 0.117429 19.1421 0 19.3325 0C19.6545 0 19.8766 0.322705 19.7615 0.623455L10.9326 23.7048C10.8646 23.8826 10.6939 24 10.5036 24C10.1816 24 9.9595 23.6773 10.0745 23.3765L18.9035 0.295236Z' fill='%23B1C3EE'/%3E%3C/svg%3E");
+  display: block;
+}
+.header .mobile-menu ul li .screen ul li a.dropright::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M9.29289 18.7071C8.90237 18.3166 8.90237 17.6834 9.29289 17.2929L14.5858 12L9.29289 6.70711C8.90237 6.31658 8.90237 5.68342 9.29289 5.29289C9.68342 4.90237 10.3166 4.90237 10.7071 5.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L10.7071 18.7071C10.3166 19.0976 9.68342 19.0976 9.29289 18.7071Z' fill='white'/%3E%3C/svg%3E");
+  display: block;
+  margin-top: 5px;
+  margin-left: auto;
+}
+.header .mobile-menu .mobile-menu-line {
+  width: 100%;
+  height: 1px;
+  background: #626C81;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.header .mobile-menu .mobile-contacts {
+  padding: 0 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .mobile-menu .mobile-contacts a::before {
+  content: none !important;
+}
+.header .mobile-menu .mobile-contacts .text {
+  color: #A9AEB9;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.header .mobile-menu .mobile-contacts .header-phone {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 50px;
+}
+.header .mobile-menu .mobile-contacts .social {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.header .mobile-menu .mobile-contacts .social .callback {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+@media (max-width: 1288px) {
+  .header .mobile-menu .mobile-contacts .social .callback {
+    padding: 10px;
+  }
+}
+.header .mobile-menu .mobile-contacts .social .callback span {
+  color: var(--white);
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .mobile-menu .mobile-contacts .email {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  color: #FFF;
+  text-align: right;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header .mobile-menu .mobile-contacts .email a {
+  color: #FFF;
+  text-align: right;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 
 .main-banner {
-  padding: 50px 0; }
-  @media (max-width: 768px) {
-    .main-banner {
-      display: none; } }
-  .main-banner .content .banner-swiper-container .swiper-block {
-    width: 100%;
-    height: 240px;
-    position: relative;
-    border-radius: 5px 5px 0px 0px;
-    background: #E2E2E2; }
-    .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper {
-      width: 100%;
-      border-radius: 5px 5px 0px 0px;
-      height: 100%; }
-      .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide {
-        position: relative;
-        border-radius: 5px 5px 0px 0px;
-        overflow: hidden; }
-        .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-        .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          display: flex;
-          width: 474px;
-          padding: 0px 50px;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          flex-shrink: 0;
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='475' height='240' viewBox='0 0 475 240' fill='none'%3E%3Cpath d='M0 0H474.5L413.5 240H0V0Z' fill='%232E3441'/%3E%3C/svg%3E");
-          background-repeat: no-repeat;
-          background-size: cover; }
-          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info h2 {
-            color: #FFF;
-            font-family: "Myriad Pro";
-            font-size: 50px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 50px;
-            margin: 0;
-            padding: 0; }
-          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info span {
-            color: #FFF;
-            font-family: "Myriad Pro";
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            margin-bottom: 20px; }
-          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p {
-            color: #FFF;
-            font-family: "Myriad Pro";
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            margin-bottom: 20px; }
-            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p.colored {
-              color: #24C062;
-              font-family: "Myriad Pro";
-              font-size: 15px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal; }
-          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button {
-            display: flex;
-            padding: 10px 20px;
-            align-items: center;
-            gap: 10px;
-            border-radius: 10px;
-            background: var(--brand-color);
-            border: none;
-            cursor: pointer; }
-            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button span {
-              color: #FFF;
-              font-family: "Myriad Pro";
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: normal;
-              margin: 0; }
-    .main-banner .content .banner-swiper-container .swiper-block .banner-arrow {
-      cursor: pointer; }
-      .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        z-index: 13;
-        transform: translate(-50%, -50%); }
-        .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path {
-          fill: var(--brand-color); }
-          .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path:last-child {
-            stroke: #FFFFFF; }
-      .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next {
-        position: absolute;
-        top: 50%;
-        right: 0;
-        z-index: 13;
-        transform: translate(50%, -50%); }
-        .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path {
-          fill: var(--brand-color); }
-          .main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path:last-child {
-            stroke: #FFFFFF; }
-  .main-banner .content .banner-swiper-container .main-banner-pagination {
-    display: flex;
-    gap: 5px;
-    align-items: center; }
-    .main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet {
-      display: flex;
-      padding: 10px 15px;
-      align-items: center;
-      gap: 10px;
-      border-radius: 0px 0px 5px 5px;
-      color: #2E3441;
-      font-family: "Myriad Pro";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 12px */
-      cursor: pointer; }
-      .main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet.active {
-        color: #EEF2FA;
-        font-family: "Myriad Pro";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100%;
-        /* 12px */
-        display: flex;
-        padding: 10px 15px;
-        align-items: center;
-        gap: 10px;
-        border-radius: 0px 0px 5px 5px;
-        background: #2E3441; }
+  padding: 50px 0;
+}
+@media (max-width: 768px) {
+  .main-banner {
+    display: none;
+  }
+}
+.main-banner .content .banner-swiper-container .swiper-block {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  border-radius: 5px 5px 0px 0px;
+  background: #E2E2E2;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+  height: 100%;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide {
+  position: relative;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  width: 474px;
+  padding: 0px 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='475' height='240' viewBox='0 0 475 240' fill='none'%3E%3Cpath d='M0 0H474.5L413.5 240H0V0Z' fill='%232E3441'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info h2 {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info p.colored {
+  color: #24C062;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--brand-color);
+  border: none;
+  cursor: pointer;
+}
+.main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow {
+  cursor: pointer;
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 13;
+  transform: translate(-50%, -50%);
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path {
+  fill: var(--brand-color);
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-prev:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 13;
+  transform: translate(50%, -50%);
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path {
+  fill: var(--brand-color);
+}
+.main-banner .content .banner-swiper-container .swiper-block .banner-arrow.main-banner-next:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.main-banner .content .banner-swiper-container .main-banner-pagination {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet {
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0px 0px 5px 5px;
+  color: #2E3441;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  cursor: pointer;
+}
+.main-banner .content .banner-swiper-container .main-banner-pagination .pagination-bullet.active {
+  color: #EEF2FA;
+  font-family: "Myriad Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 12px */
+  display: flex;
+  padding: 10px 15px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0px 0px 5px 5px;
+  background: #2E3441;
+}
 
 .main-banner-mobile {
   display: flex;
@@ -1020,111 +1215,136 @@ body {
   align-items: flex-start;
   align-self: stretch;
   background: var(--dark-color);
-  display: none; }
-  @media (max-width: 768px) {
-    .main-banner-mobile {
-      display: flex; } }
-  .main-banner-mobile .main-banner-mobile-swiper {
-    width: 100%; }
-    .main-banner-mobile .main-banner-mobile-swiper .swiper-slide {
-      display: flex;
-      flex-direction: column;
-      gap: 30px; }
-      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image {
-        height: 226px;
-        border-radius: 15px;
-        overflow: hidden; }
-        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover; }
-      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide h2 {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 50px;
-        margin: 0;
-        padding: 0; }
-      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide span {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal; }
-      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide p {
-        color: #FFF;
-        font-family: "Myriad Pro";
-        font-size: 15px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal; }
-        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide p.colored {
-          color: #24C062;
-          font-family: "Myriad Pro";
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal; }
-      .main-banner-mobile .main-banner-mobile-swiper .swiper-slide button {
-        display: flex;
-        padding: 10px 20px;
-        align-items: center;
-        gap: 10px;
-        border-radius: 10px;
-        background: var(--brand-color);
-        border: none;
-        cursor: pointer;
-        justify-content: center; }
-        .main-banner-mobile .main-banner-mobile-swiper .swiper-slide button span {
-          color: #FFF;
-          font-family: "Myriad Pro";
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal;
-          margin: 0; }
-    .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination {
-      margin-top: 30px; }
-      .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet {
-        width: 18px;
-        height: 18px;
-        background: #626C81;
-        border-radius: 50px; }
-        .main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-          background: #fff; }
+  display: none;
+}
+@media (max-width: 768px) {
+  .main-banner-mobile {
+    display: flex;
+  }
+}
+.main-banner-mobile .main-banner-mobile-swiper {
+  width: 100%;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image {
+  height: 226px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide h2 {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 50px;
+  margin: 0;
+  padding: 0;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide p {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide p.colored {
+  color: #24C062;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide button {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: var(--brand-color);
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+}
+.main-banner-mobile .main-banner-mobile-swiper .swiper-slide button span {
+  color: #FFF;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+}
+.main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination {
+  margin-top: 30px;
+}
+.main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background: #626C81;
+  border-radius: 50px;
+}
+.main-banner-mobile .main-banner-mobile-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #fff;
+}
 
 .chapter {
-  padding: 15px 0; }
-  @media (max-width: 1100px) {
-    .chapter {
-      padding: 30px 0 0; } }
-  .chapter .content {
-    display: flex;
-    gap: 10px;
-    align-items: center; }
-    @media (max-width: 1024px) {
-      .chapter .content svg {
-        display: none; } }
-    .chapter .content p {
-      color: #D7DFF0;
-      text-align: center;
-      font-family: "Myriad Pro";
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 100%;
-      /* 30px */
-      text-transform: uppercase; }
-      @media (max-width: 1100px) {
-        .chapter .content p {
-          font-size: 25px; } }
-    .chapter .content .line {
-      flex-grow: 1;
-      height: 1px;
-      background: #D7DFF0; }
+  padding: 15px 0;
+}
+@media (max-width: 1100px) {
+  .chapter {
+    padding: 30px 0 0;
+  }
+}
+.chapter .content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .chapter .content svg {
+    display: none;
+  }
+}
+.chapter .content p {
+  color: #D7DFF0;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+  .chapter .content p {
+    font-size: 25px;
+  }
+}
+.chapter .content .line {
+  flex-grow: 1;
+  height: 1px;
+  background: #D7DFF0;
+}
 
 .product-card {
   display: flex;
@@ -1135,159 +1355,176 @@ body {
   gap: 30px;
   border-radius: 15px;
   background: #FFF;
-  border: 1px solid #fff; }
-  .product-card:hover {
-    border-radius: 5px;
-    border: 1px solid #EDEDED;
-    background: #FAFBFF; }
-    .product-card:hover .img-container img {
-      transform: scale(1.2); }
-  .product-card .title-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; }
-    .product-card .title-block .product-title {
-      color: var(--dark-color);
-      text-align: center;
-      font-family: "Myriad Pro";
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 25px */ }
-    .product-card .title-block .product-chapter {
-      color: var(--dark-color);
-      text-align: center;
-      font-family: "Myriad Pro";
-      font-size: 15px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 15px */ }
-  .product-card .img-container {
-    height: 210px;
-    width: 100%;
-    position: relative;
-    overflow: hidden; }
-    .product-card .img-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain; }
-    .product-card .img-container .labels {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 1px; }
-      .product-card .img-container .labels .label.top {
-        display: flex;
-        padding: 5px 10px;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 0px 5px 5px 0px;
-        background: var(--brand-color);
-        color: #FAFBFF;
-        text-align: center;
-        font-family: "Myriad Pro";
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        /* 10px */
-        text-transform: uppercase;
-        width: fit-content; }
-      .product-card .img-container .labels .label.new {
-        display: flex;
-        padding: 5px 10px;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 0px 5px 5px 0px;
-        background: var(--green-color);
-        color: #FAFBFF;
-        text-align: center;
-        font-family: "Myriad Pro";
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        /* 10px */
-        text-transform: uppercase;
-        width: fit-content; }
-      .product-card .img-container .labels .label.sale {
-        display: flex;
-        padding: 5px 10px;
-        align-items: flex-start;
-        gap: 10px;
-        border-radius: 0px 5px 5px 0px;
-        background: var(--red-color);
-        color: #FAFBFF;
-        text-align: center;
-        font-family: "Myriad Pro";
-        font-size: 10px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 100%;
-        /* 10px */
-        text-transform: uppercase;
-        width: fit-content; }
-  .product-card .price {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-direction: column; }
-    .product-card .price .sale-price {
-      color: #C2C2C2;
-      text-align: center;
-      font-family: "Myriad Pro";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 20px */
-      text-decoration-line: line-through;
-      height: 20px; }
-    .product-card .price .total-price {
-      color: #2E3441;
-      text-align: center;
-      font-family: "Myriad Pro";
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      /* 30px */ }
-  .product-card button {
-    display: flex;
-    padding: 15px 20px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 10px;
-    border: 1px solid var(--brand-color);
-    background: transparent;
-    cursor: pointer; }
-    .product-card button:hover {
-      background: #5287FF; }
-      .product-card button:hover svg path {
-        stroke: #FFFFFF; }
-      .product-card button:hover span {
-        color: #FFFFFF; }
-    .product-card button span {
-      color: var(--brand-color);
-      font-family: "Myriad Pro";
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal; }
+  border: 1px solid #fff;
+}
+.product-card:hover {
+  border-radius: 5px;
+  border: 1px solid #EDEDED;
+  background: #FAFBFF;
+}
+.product-card:hover .img-container img {
+  transform: scale(1.2);
+}
+.product-card .title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.product-card .title-block .product-title {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 25px */
+}
+.product-card .title-block .product-chapter {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 15px */
+}
+.product-card .img-container {
+  height: 210px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.product-card .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.product-card .img-container .labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+}
+.product-card .img-container .labels .label.top {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--brand-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .img-container .labels .label.new {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--green-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .img-container .labels .label.sale {
+  display: flex;
+  padding: 5px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 5px 5px 0px;
+  background: var(--red-color);
+  color: #FAFBFF;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 10px */
+  text-transform: uppercase;
+  width: fit-content;
+}
+.product-card .price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+}
+.product-card .price .sale-price {
+  color: #C2C2C2;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 20px */
+  text-decoration-line: line-through;
+  height: 20px;
+}
+.product-card .price .total-price {
+  color: #2E3441;
+  text-align: center;
+  font-family: "Myriad Pro";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 30px */
+}
+.product-card button {
+  display: flex;
+  padding: 15px 20px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--brand-color);
+  background: transparent;
+  cursor: pointer;
+}
+.product-card button:hover {
+  background: #5287FF;
+}
+.product-card button:hover svg path {
+  stroke: #FFFFFF;
+}
+.product-card button:hover span {
+  color: #FFFFFF;
+}
+.product-card button span {
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 .product-slider {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+}
+.product-slider .products-slider {
+  padding: 50px 0;
+}
+@media (max-width: 1024px) {
   .product-slider .products-slider {
-    padding: 50px 0; }
-    @media (max-width: 1024px) {
-      .product-slider .products-slider {
-        padding: 30px 0; } }
+    padding: 30px 0;
+  }
+}
 
 .show-more {
   display: flex;
@@ -1300,268 +1537,342 @@ body {
   background: #F7F9FD;
   width: 100%;
   border: none;
-  cursor: pointer; }
-  .show-more:hover {
-    background: #5287FF; }
-    .show-more:hover svg path {
-      fill: #FFFFFF; }
-    .show-more:hover span {
-      color: #FFFFFF; }
-  .show-more span {
-    color: var(--brand-color);
-    font-family: "Myriad Pro";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-transform: uppercase; }
+  cursor: pointer;
+}
+.show-more:hover {
+  background: #5287FF;
+}
+.show-more:hover svg path {
+  fill: #FFFFFF;
+}
+.show-more:hover span {
+  color: #FFFFFF;
+}
+.show-more span {
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
 
 .advantages {
-  padding: 50px 0 100px; }
-  .advantages .advantages-swiper {
-    width: 100%; }
-    .advantages .advantages-swiper .swiper-slide {
-      height: 100%; }
-      .advantages .advantages-swiper .swiper-slide .advantages-card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        align-items: center; }
-        .advantages .advantages-swiper .swiper-slide .advantages-card .title {
-          color: #2E3441;
-          text-align: center;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          text-transform: uppercase;
-          height: 48px; }
-          .advantages .advantages-swiper .swiper-slide .advantages-card .title span {
-            text-transform: none; }
-        .advantages .advantages-swiper .swiper-slide .advantages-card .subtitle {
-          margin-top: auto;
-          color: #AFB7C9;
-          text-align: center;
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: normal; }
-    .advantages .advantages-swiper .custom-swiper-pagination {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      display: none; }
-      @media (max-width: 1180px) {
-        .advantages .advantages-swiper .custom-swiper-pagination {
-          display: flex; } }
-      .advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet {
-        width: 18px;
-        height: 18px;
-        border-radius: 50px;
-        background: #626C81; }
-        .advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-          width: 18px;
-          height: 18px;
-          background: var(--brand-color);
-          border-radius: 50px; }
+  padding: 50px 0 100px;
+}
+.advantages .advantages-swiper {
+  width: 100%;
+}
+.advantages .advantages-swiper .swiper-slide {
+  height: 100%;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .title {
+  color: #2E3441;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  height: 48px;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .title span {
+  text-transform: none;
+}
+.advantages .advantages-swiper .swiper-slide .advantages-card .subtitle {
+  margin-top: auto;
+  color: #AFB7C9;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.advantages .advantages-swiper .custom-swiper-pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  display: none;
+}
+@media (max-width: 1180px) {
+  .advantages .advantages-swiper .custom-swiper-pagination {
+    display: flex;
+  }
+}
+.advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50px;
+  background: #626C81;
+}
+.advantages .advantages-swiper .custom-swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 18px;
+  height: 18px;
+  background: var(--brand-color);
+  border-radius: 50px;
+}
 
 .technology {
   padding: 100px 0;
   background: #FFFFFF;
-  margin-bottom: 35px; }
-  .technology .technology-wrap {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    width: 100%; }
-    .technology .technology-wrap .technology-arrow {
-      cursor: pointer; }
-      @media (max-width: 1230px) {
-        .technology .technology-wrap .technology-arrow {
-          display: none; } }
-      .technology .technology-wrap .technology-arrow.technology-prev:hover svg path {
-        fill: var(--brand-color); }
-        .technology .technology-wrap .technology-arrow.technology-prev:hover svg path:last-child {
-          stroke: #FFFFFF; }
-      .technology .technology-wrap .technology-arrow.technology-next:hover svg path {
-        fill: var(--brand-color); }
-        .technology .technology-wrap .technology-arrow.technology-next:hover svg path:last-child {
-          stroke: #FFFFFF; }
-    .technology .technology-wrap .technology-swiper {
-      width: calc(100% - 80px - 100px); }
-      @media (max-width: 1230px) {
-        .technology .technology-wrap .technology-swiper {
-          width: 100%; } }
-      .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper {
-        display: flex;
-        padding: 30px;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        border-radius: 15px;
-        background: #FFF;
-        height: 80px; }
-        .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.windows {
-          border-radius: 15px;
-          background: #0DADEA; }
-        .technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.kaspersky {
-          border-radius: 15px;
-          background: #006D5C; }
-      .technology .technology-wrap .technology-swiper .swiper-scrollbar {
-        position: static;
-        margin-top: 30px;
-        display: none; }
-        @media (max-width: 1230px) {
-          .technology .technology-wrap .technology-swiper .swiper-scrollbar {
-            display: block; } }
-        .technology .technology-wrap .technology-swiper .swiper-scrollbar .swiper-scrollbar-drag {
-          border-radius: 10px;
-          background: var(--brand-color);
-          height: 2px; }
+  margin-bottom: 35px;
+}
+.technology .technology-wrap {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.technology .technology-wrap .technology-arrow {
+  cursor: pointer;
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-arrow {
+    display: none;
+  }
+}
+.technology .technology-wrap .technology-arrow.technology-prev:hover svg path {
+  fill: var(--brand-color);
+}
+.technology .technology-wrap .technology-arrow.technology-prev:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.technology .technology-wrap .technology-arrow.technology-next:hover svg path {
+  fill: var(--brand-color);
+}
+.technology .technology-wrap .technology-arrow.technology-next:hover svg path:last-child {
+  stroke: #FFFFFF;
+}
+.technology .technology-wrap .technology-swiper {
+  width: calc(100% - 80px - 100px);
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-swiper {
+    width: 100%;
+  }
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  background: #FFF;
+  height: 80px;
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.windows {
+  border-radius: 15px;
+  background: #0DADEA;
+}
+.technology .technology-wrap .technology-swiper .swiper-slide .logo-wrapper.kaspersky {
+  border-radius: 15px;
+  background: #006D5C;
+}
+.technology .technology-wrap .technology-swiper .swiper-scrollbar {
+  position: static;
+  margin-top: 30px;
+  display: none;
+}
+@media (max-width: 1230px) {
+  .technology .technology-wrap .technology-swiper .swiper-scrollbar {
+    display: block;
+  }
+}
+.technology .technology-wrap .technology-swiper .swiper-scrollbar .swiper-scrollbar-drag {
+  border-radius: 10px;
+  background: var(--brand-color);
+  height: 2px;
+}
 
 .catalog-cards {
   padding-top: 35px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+}
+.catalog-cards .content .catalog-list {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+@media (max-width: 1425px) {
   .catalog-cards .content .catalog-list {
+    gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .catalog-cards .content .catalog-list {
+    gap: 10px;
+  }
+}
+.catalog-cards .content .catalog-list li {
+  width: calc((100% - 200px) / 5);
+}
+@media (max-width: 1425px) {
+  .catalog-cards .content .catalog-list li {
+    width: calc((100% - 120px) / 5);
+  }
+}
+@media (max-width: 1350px) {
+  .catalog-cards .content .catalog-list li {
+    width: calc((100% - 90px) / 4);
+  }
+}
+@media (max-width: 1090px) {
+  .catalog-cards .content .catalog-list li {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media (max-width: 860px) {
+  .catalog-cards .content .catalog-list li {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media (max-width: 768px) {
+  .catalog-cards .content .catalog-list li {
     width: 100%;
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap; }
-    @media (max-width: 1425px) {
-      .catalog-cards .content .catalog-list {
-        gap: 30px; } }
-    @media (max-width: 768px) {
-      .catalog-cards .content .catalog-list {
-        gap: 10px; } }
-    .catalog-cards .content .catalog-list li {
-      width: calc((100% - 50px * 4) / 5); }
-      @media (max-width: 1425px) {
-        .catalog-cards .content .catalog-list li {
-          width: calc((100% - 30px * 4) / 5); } }
-      @media (max-width: 1350px) {
-        .catalog-cards .content .catalog-list li {
-          width: calc((100% - 30px * 3) / 4); } }
-      @media (max-width: 1090px) {
-        .catalog-cards .content .catalog-list li {
-          width: calc((100% - 30px * 2) / 3); } }
-      @media (max-width: 860px) {
-        .catalog-cards .content .catalog-list li {
-          width: calc((100% - 30px ) / 2); } }
-      @media (max-width: 768px) {
-        .catalog-cards .content .catalog-list li {
-          width: 100%; } }
-      .catalog-cards .content .catalog-list li .catalog-card {
-        width: 100%;
-        padding: 50px;
-        border-radius: 15px;
-        background: #FFF;
-        height: 395px;
-        position: relative;
-        cursor: pointer; }
-        @media (max-width: 768px) {
-          .catalog-cards .content .catalog-list li .catalog-card {
-            display: none; } }
-        .catalog-cards .content .catalog-list li .catalog-card:hover .list-wrap ul {
-          margin-top: 0; }
-          .catalog-cards .content .catalog-list li .catalog-card:hover .list-wrap ul li {
-            color: var(--brand-color); }
-        .catalog-cards .content .catalog-list li .catalog-card svg {
-          height: 40px;
-          width: 40px;
-          margin-bottom: 30px; }
-        .catalog-cards .content .catalog-list li .catalog-card .list-wrap {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: transparent;
-          padding: 50px;
-          border-radius: 15px;
-          display: flex;
-          flex-direction: column; }
-          .catalog-cards .content .catalog-list li .catalog-card .list-wrap ul {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            width: 100%;
-            background: #FFFFFF;
-            position: static;
-            margin-top: 70px;
-            transition: .3s ease; }
-            .catalog-cards .content .catalog-list li .catalog-card .list-wrap ul li {
-              width: 100%;
-              color: var(--dark-color);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: normal;
-              overflow-wrap: break-word;
-              hyphens: auto;
-              -webkit-hyphens: auto;
-              -ms-hyphens: auto; }
-              .catalog-cards .content .catalog-list li .catalog-card .list-wrap ul li a {
-                color: var(--dark-color);
-                font-size: 15px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal; }
-      .catalog-cards .content .catalog-list li .catalog-item-accordeon {
-        display: none; }
-        @media (max-width: 768px) {
-          .catalog-cards .content .catalog-list li .catalog-item-accordeon {
-            display: block; } }
-        .catalog-cards .content .catalog-list li .catalog-item-accordeon .box {
-          position: relative;
-          border-radius: 15px;
-          background: #FFF; }
-          .catalog-cards .content .catalog-list li .catalog-item-accordeon .box.active .label::after {
-            transform: translateY(-50%) rotate(180deg); }
-          .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .label {
-            position: relative;
-            color: #2E3441;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            padding: 20px 50px 20px 20px;
-            overflow-wrap: break-word;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -ms-hyphens: auto; }
-            .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .label::after {
-              content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z' fill='%230D0D0D'/%3E%3C/svg%3E");
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              right: 20px;
-              font-size: 25px;
-              font-weight: bold; }
-          .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content {
-            position: relative;
-            background-color: #fff;
-            overflow: hidden;
-            max-height: 0;
-            transition: 0.3s;
-            width: 100%;
-            padding: 0;
-            border-radius: 15px; }
-            .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul {
-              padding: 10px 20px 20px;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              gap: 30px; }
-              .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul li {
-                width: 100%; }
-                .catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul li a {
-                  color: #2E3441;
-                  font-size: 20px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: normal; }
+  }
+}
+.catalog-cards .content .catalog-list li .catalog-card {
+  width: 100%;
+  padding: 50px;
+  border-radius: 15px;
+  background: #FFF;
+  height: 395px;
+  position: relative;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .catalog-cards .content .catalog-list li .catalog-card {
+    display: none;
+  }
+}
+.catalog-cards .content .catalog-list li .catalog-card:hover .list-wrap ul {
+  margin-top: 0;
+}
+.catalog-cards .content .catalog-list li .catalog-card:hover .list-wrap ul li {
+  color: var(--brand-color);
+}
+.catalog-cards .content .catalog-list li .catalog-card svg {
+  height: 40px;
+  width: 40px;
+  margin-bottom: 30px;
+}
+.catalog-cards .content .catalog-list li .catalog-card .list-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  padding: 50px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.catalog-cards .content .catalog-list li .catalog-card .list-wrap ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  background: #FFFFFF;
+  position: static;
+  margin-top: 70px;
+  transition: 0.3s ease;
+}
+.catalog-cards .content .catalog-list li .catalog-card .list-wrap ul li {
+  width: 100%;
+  color: var(--dark-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+.catalog-cards .content .catalog-list li .catalog-card .list-wrap ul li a {
+  color: var(--dark-color);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .catalog-cards .content .catalog-list li .catalog-item-accordeon {
+    display: block;
+  }
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box {
+  position: relative;
+  border-radius: 15px;
+  background: #FFF;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box.active .label::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .label {
+  position: relative;
+  color: #2E3441;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 50px 20px 20px;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .label::after {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5.29289 8.29289C5.68342 7.90237 6.31658 7.90237 6.70711 8.29289L12 13.5858L17.2929 8.29289C17.6834 7.90237 18.3166 7.90237 18.7071 8.29289C19.0976 8.68342 19.0976 9.31658 18.7071 9.70711L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L5.29289 9.70711C4.90237 9.31658 4.90237 8.68342 5.29289 8.29289Z' fill='%230D0D0D'/%3E%3C/svg%3E");
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.3s;
+  width: 100%;
+  padding: 0;
+  border-radius: 15px;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul {
+  padding: 10px 20px 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul li {
+  width: 100%;
+}
+.catalog-cards .content .catalog-list li .catalog-item-accordeon .box .content ul li a {
+  color: #2E3441;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
 
 /*# sourceMappingURL=style.css.map */
