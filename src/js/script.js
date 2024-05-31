@@ -35,14 +35,14 @@ catalogBtn?.addEventListener('click' , (e) => {
     submenuList1.classList.add('open');
     overlay.classList.add('open');
 })
-catalogDropright?.addEventListener('mouseover' , (e)=> {
-    submenuList2.classList.add('open')
-})
-catalogDropright?.addEventListener('mouseout' , (e)=> {
-    submenuList2.classList.remove('open')
+
+catalogDropright?.addEventListener('click' , (e)=> {
+    e.preventDefault();
+    submenuList2.classList.toggle('open')
 })
 overlay.addEventListener('click' , ()=> {
     submenuList1.classList.remove('open');
+    submenuList2.classList.remove('open')
     overlay.classList.remove('open');
 })
 
@@ -259,4 +259,27 @@ if (technologySlider) {
         },
 
     });
+}
+
+
+
+// accordeon
+
+
+const boxes = document.querySelectorAll(".box");
+
+boxes.forEach((box) => {
+    box.addEventListener("click", boxHandler);
+});
+
+function boxHandler(e) {
+    e.preventDefault();
+    let currentBox = e.target.closest(".box");
+    let currentContent = e.target.nextElementSibling;
+    currentBox.classList.toggle("active");
+    if (currentBox.classList.contains("active")) {
+        currentContent.style.maxHeight = currentContent.scrollHeight + "px";
+    } else {
+        currentContent.style.maxHeight = 0;
+    }
 }
