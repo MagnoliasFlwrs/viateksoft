@@ -2485,12 +2485,204 @@ body {
 .catalog-items {
   padding: 30px 0 50px;
 }
+.catalog-items .content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .catalog-items .content .catalog-list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 30px;
+}
+.catalog-items .content .catalog-list .product-card {
+  width: calc((100% - 80px) / 5);
+}
+@media (max-width: 1370px) {
+  .catalog-items .content .catalog-list .product-card {
+    width: calc((100% - 60px) / 4);
+  }
+}
+@media (max-width: 1115px) {
+  .catalog-items .content .catalog-list .product-card {
+    width: calc((100% - 40px) / 3);
+  }
+}
+@media (max-width: 835px) {
+  .catalog-items .content .catalog-list .product-card {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .catalog-items .content .catalog-list .product-card {
+    width: 100%;
+  }
+}
+
+.pagination {
+  padding-top: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .pagination {
+    gap: 10px;
+  }
+}
+.pagination li {
+  display: flex;
+  height: 44px;
+  padding: 7px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #FFF;
+  color: var(--brand-color);
+  font-family: "Myriad Pro";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .pagination li {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+}
+.pagination li:hover {
+  border-radius: 10px;
+  background: #5287FF;
+  color: #FFFFFF;
+}
+.pagination li:hover svg path {
+  fill: #FFFFFF;
+}
+.pagination li.active {
+  border-radius: 10px;
+  background: #2454C0;
+  color: #FFFFFF;
+}
+.pagination li.active svg path {
+  fill: #FFFFFF;
+}
+
+.about-container {
+  padding: 50px 0 100px;
+}
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 50px 0;
+  }
+}
+.about-container .about-wrapper {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+}
+@media (max-width: 1024px) {
+  .about-container .about-wrapper {
+    flex-direction: column-reverse;
+  }
+}
+.about-container .about-wrapper .column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: calc((100% - 50px) / 2);
+}
+@media (max-width: 1024px) {
+  .about-container .about-wrapper .column {
+    width: 100%;
+  }
+}
+.about-container .about-wrapper .column .img-container {
+  height: 926px;
+  width: 100%;
+  border-radius: 5px;
+  background: var(--white);
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .about-container .about-wrapper .column .img-container {
+    height: auto;
+  }
+}
+.about-container .about-wrapper .column .img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-container .about-wrapper .column p {
+  color: #626C81;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.about-container .about-wrapper .column p.title {
+  color: #2E3441;
+  font-family: "Myriad Pro";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.about-container .about-wrapper .column p.subtitle {
+  color: #626C81;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.about-container .about-wrapper .column .partners {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-container .about-wrapper .column .partners li {
+  max-height: 45px;
+  display: flex;
+  align-items: center;
+}
+.about-container .about-wrapper .column .partners li img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.about-container .about-wrapper .column .services {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .about-container .about-wrapper .column .services {
+    padding: 0;
+  }
+}
+.about-container .about-wrapper .column .services li {
+  color: #626C81;
+  font-family: "Myriad Pro";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.about-container .about-wrapper .column .services li::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4ZM2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM16.6644 8.75259C17.0771 9.11951 17.1143 9.75158 16.7474 10.1644L11.4141 16.1644C11.2243 16.3779 10.9523 16.5 10.6667 16.5C10.381 16.5 10.109 16.3779 9.91926 16.1644L7.25259 13.1644C6.88567 12.7516 6.92285 12.1195 7.33564 11.7526C7.74842 11.3857 8.38049 11.4229 8.74741 11.8356L10.6667 13.9948L15.2526 8.83564C15.6195 8.42285 16.2516 8.38567 16.6644 8.75259Z' fill='%232454C0'/%3E%3C/svg%3E");
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
