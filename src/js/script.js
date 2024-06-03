@@ -276,7 +276,20 @@ function boxHandler(e) {
     e.preventDefault();
     let currentBox = e.target.closest(".box");
     let currentContent = e.target.nextElementSibling;
+    let currentHide =  e.target.closest(".box").querySelector('.hide');
+
+    console.log(currentHide);
+
     currentBox.classList.toggle("active");
+
+    if (currentHide) {
+        currentHide.addEventListener('click' , (e)=> {
+            e.stopPropagation();
+            e.preventDefault()
+            currentBox.classList.remove('active');
+            currentContent.style.maxHeight = 0;
+        })
+    }
     if (currentBox.classList.contains("active")) {
         currentContent.style.maxHeight = currentContent.scrollHeight + "px";
     } else {
