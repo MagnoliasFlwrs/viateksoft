@@ -348,3 +348,36 @@ catalogFilterItems?.forEach(el=> {
         el.classList.add('active')
     })
 })
+
+
+const thumbsGallery = document.querySelector('.gallery-mini');
+
+if (thumbsGallery) {
+    let swiper4 = new Swiper(".gallery-mini", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        direction: "horizontal",
+        navigation: {
+            nextEl: ".gallery-mini-button-next",
+            prevEl: ".gallery-mini-button-prev",
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 4,
+                direction: "horizontal",
+            }
+        },
+    });
+    let swiper5 = new Swiper(".gallery", {
+        spaceBetween: 10,
+        direction: 'horizontal',
+        navigation: {
+            nextEl: ".gallery-button-next",
+            prevEl: ".gallery-button-prev",
+        },
+        thumbs: {
+            swiper: swiper4,
+        },
+    });
+}

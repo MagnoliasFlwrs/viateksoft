@@ -675,5 +675,255 @@
           font-style: normal;
           font-weight: 400;
           line-height: normal; }
+  .dark-theme .product-info-container {
+    padding-bottom: 50px; }
+    .dark-theme .product-info-container .content {
+      display: flex;
+      gap: 30px; }
+      .dark-theme .product-info-container .content .info-block {
+        background: var(--dark-color); }
+        .dark-theme .product-info-container .content .info-block .product-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 30px;
+          align-self: stretch; }
+          .dark-theme .product-info-container .content .info-block .product-text span {
+            color: #AFB7C9;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            /* 15px */
+            text-transform: uppercase; }
+          .dark-theme .product-info-container .content .info-block .product-text p {
+            color: #fff; }
+          .dark-theme .product-info-container .content .info-block .product-text a {
+            display: flex;
+            padding: 7px 10px 7px 15px;
+            align-items: center;
+            gap: 10px;
+            border-radius: 15px; }
+            .dark-theme .product-info-container .content .info-block .product-text a span {
+              color: #2454C0;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              text-transform: uppercase; }
+            .dark-theme .product-info-container .content .info-block .product-text a:hover {
+              border-radius: 15px;
+              background: #5287FF; }
+              .dark-theme .product-info-container .content .info-block .product-text a:hover span {
+                color: #FFFFFF; }
+              .dark-theme .product-info-container .content .info-block .product-text a:hover svg path {
+                fill: #FFFFFF; }
+        .dark-theme .product-info-container .content .info-block .product-row {
+          display: flex;
+          width: 100%;
+          gap: 30px; }
+          @media (max-width: 1426px) {
+            .dark-theme .product-info-container .content .info-block .product-row {
+              flex-direction: column; } }
+          .dark-theme .product-info-container .content .info-block .product-row .product-row-info {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; }
+            .dark-theme .product-info-container .content .info-block .product-row .product-row-info .labels {
+              display: flex;
+              gap: 10px; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .labels li.top {
+                display: flex;
+                padding: 5px 10px;
+                align-items: flex-start;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--brand-color);
+                color: #FAFBFF;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 10px */
+                text-transform: uppercase;
+                width: fit-content; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .labels li.new {
+                display: flex;
+                padding: 5px 10px;
+                align-items: flex-start;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--green-color);
+                color: #FAFBFF;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 10px */
+                text-transform: uppercase;
+                width: fit-content; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .labels li.sale {
+                display: flex;
+                padding: 5px 10px;
+                align-items: flex-start;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--red-color);
+                color: #FAFBFF;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 10px */
+                text-transform: uppercase;
+                width: fit-content; }
+            .dark-theme .product-info-container .content .info-block .product-row .product-row-info .product-title {
+              display: flex;
+              flex-direction: column;
+              gap: 10px; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .product-title h1 {
+                color: #fff;
+                font-family: "Myriad Pro";
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                /* 50px */ }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .product-title span {
+                color: #fff;
+                font-family: "Myriad Pro";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                /* 15px */ }
+            .dark-theme .product-info-container .content .info-block .product-row .product-row-info .price-row {
+              display: flex;
+              gap: 20px;
+              align-items: center; }
+              @media (max-width: 500px) {
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .price-row {
+                  flex-direction: column; } }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .price-row .old-price {
+                color: #C2C2C2;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                /* 20px */
+                text-decoration-line: line-through; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .price-row .total-price {
+                color: #fff; }
+            .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns {
+              display: flex;
+              gap: 20px;
+              width: 100%; }
+              @media (max-width: 550px) {
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns {
+                  flex-direction: column; } }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .oneclick {
+                display: flex;
+                padding: 15px 20px;
+                align-items: center;
+                gap: 10px;
+                border-radius: 10px;
+                background: var(--brand-color);
+                color: #FFF;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                border: none;
+                cursor: pointer; }
+                @media (max-width: 550px) {
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .oneclick {
+                    width: 100%;
+                    justify-content: center; } }
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .oneclick:hover {
+                  background: #5287FF; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart {
+                display: flex;
+                padding: 15px 20px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-grow: 1;
+                border-radius: 10px;
+                border: 1px solid var(--brand-color);
+                background: transparent;
+                cursor: pointer; }
+                @media (max-width: 1426px) {
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart {
+                    width: max-content;
+                    flex-grow: 0; } }
+                @media (max-width: 550px) {
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart {
+                    width: 100%; } }
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart span {
+                  color: var(--brand-color);
+                  font-family: "Myriad Pro";
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal; }
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart:hover {
+                  background: var(--brand-color); }
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart:hover span {
+                    color: #FFFFFF; }
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .btns .to-cart:hover svg path {
+                    stroke: #FFFFFF; }
+            .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics {
+              display: flex;
+              padding: 30px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 30px;
+              align-self: stretch;
+              border-radius: 5px;
+              border: 1px solid #C5D7FF;
+              width: 100%; }
+              @media (max-width: 768px) {
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics {
+                  padding: 10px; } }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics p {
+                color: #AFB7C9;
+                font-family: "Myriad Pro";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%;
+                /* 15px */
+                text-transform: uppercase; }
+              .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 100%; }
+                .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li {
+                  width: 100%;
+                  display: flex;
+                  gap: 10px;
+                  align-items: center; }
+                  @media (max-width: 768px) {
+                    .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li {
+                      gap: 5px; } }
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li p {
+                    color: #fff; }
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li span {
+                    color: #fff; }
+                  .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li hr {
+                    flex-grow: 1; }
 
 /*# sourceMappingURL=dark-theme.css.map */
