@@ -553,26 +553,244 @@
     <div class="cart-container">
         <div class="content">
             <div class="cart-list">
-
+                <ul class="cart-items">
+                    <li class="cart-item">
+                        <div class="preview-column">
+                            <div class="image">
+                                <img src="./src/images/cart.png" alt="cart-image">
+                            </div>
+                            <div class="info-column">
+                                <ul>
+                                    <li class="sale">Акция</li>
+                                    <li class="new">Новинка</li>
+                                    <li class="top">ТОП</li>
+                                </ul>
+                                <p>Kaspersky Plus</p>
+                                <span>на 3 устройства</span>
+                            </div>
+                        </div>
+                        <div class="price-column">
+                            <div class="price">
+                                <span class="sale-price">3 500 руб.</span>
+                                <span class="actual-price">Скидка - 10%</span>
+                            </div>
+                            <div class="counter-wrap">
+                                <button type="button" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M17.25 11C17.6642 11 18 11.4477 18 12C18 12.5523 17.6642 13 17.25 13C8.4985 13 15.5015 13 6.75 13C6.33579 13 6 12.5523 6 12C6 11.4477 6.33579 11 6.75 11C15.2664 11 8.7336 11 17.25 11Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                                <span class="counter">1</span>
+                                <button type="button" class="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M12 6C12.4142 6 12.75 6.33579 12.75 6.75V11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H12.75V17.25C12.75 17.6642 12.4142 18 12 18C11.5858 18 11.25 17.6642 11.25 17.25V12.75H6.75C6.33579 12.75 6 12.4142 6 12C6 11.5858 6.33579 11.25 6.75 11.25H11.25V6.75C11.25 6.33579 11.5858 6 12 6Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="total-price">6 300 руб.</p>
+                            <button class="delete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#FF0000"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart-item">
+                        <div class="preview-column">
+                            <div class="image">
+                                <img src="./src/images/cart.png" alt="cart-image">
+                            </div>
+                            <div class="info-column">
+                                <ul>
+                                    <li class="sale">Акция</li>
+                                    <li class="new">Новинка</li>
+                                    <li class="top">ТОП</li>
+                                </ul>
+                                <p>Kaspersky Plus</p>
+                                <span>на 3 устройства</span>
+                            </div>
+                        </div>
+                        <div class="price-column">
+                            <div class="price">
+                                <span class="sale-price">3 500 руб.</span>
+                                <span class="actual-price">Скидка - 10%</span>
+                            </div>
+                            <div class="counter-wrap">
+                                <button type="button" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M17.25 11C17.6642 11 18 11.4477 18 12C18 12.5523 17.6642 13 17.25 13C8.4985 13 15.5015 13 6.75 13C6.33579 13 6 12.5523 6 12C6 11.4477 6.33579 11 6.75 11C15.2664 11 8.7336 11 17.25 11Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                                <span class="counter">1</span>
+                                <button type="button" class="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M12 6C12.4142 6 12.75 6.33579 12.75 6.75V11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H12.75V17.25C12.75 17.6642 12.4142 18 12 18C11.5858 18 11.25 17.6642 11.25 17.25V12.75H6.75C6.33579 12.75 6 12.4142 6 12C6 11.5858 6.33579 11.25 6.75 11.25H11.25V6.75C11.25 6.33579 11.5858 6 12 6Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="total-price">6 300 руб.</p>
+                            <button class="delete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#FF0000"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart-item">
+                        <div class="preview-column">
+                            <div class="image">
+                                <img src="./src/images/cart.png" alt="cart-image">
+                            </div>
+                            <div class="info-column">
+                                <ul>
+                                    <li class="sale">Акция</li>
+                                    <li class="new">Новинка</li>
+                                    <li class="top">ТОП</li>
+                                </ul>
+                                <p>Kaspersky Plus</p>
+                                <span>на 3 устройства</span>
+                            </div>
+                        </div>
+                        <div class="price-column">
+                            <div class="price">
+                                <span class="sale-price">3 500 руб.</span>
+                                <span class="actual-price">Скидка - 10%</span>
+                            </div>
+                            <div class="counter-wrap">
+                                <button type="button" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M17.25 11C17.6642 11 18 11.4477 18 12C18 12.5523 17.6642 13 17.25 13C8.4985 13 15.5015 13 6.75 13C6.33579 13 6 12.5523 6 12C6 11.4477 6.33579 11 6.75 11C15.2664 11 8.7336 11 17.25 11Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                                <span class="counter">1</span>
+                                <button type="button" class="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M12 6C12.4142 6 12.75 6.33579 12.75 6.75V11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H12.75V17.25C12.75 17.6642 12.4142 18 12 18C11.5858 18 11.25 17.6642 11.25 17.25V12.75H6.75C6.33579 12.75 6 12.4142 6 12C6 11.5858 6.33579 11.25 6.75 11.25H11.25V6.75C11.25 6.33579 11.5858 6 12 6Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="total-price">6 300 руб.</p>
+                            <button class="delete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#FF0000"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart-item">
+                        <div class="preview-column">
+                            <div class="image">
+                                <img src="./src/images/cart.png" alt="cart-image">
+                            </div>
+                            <div class="info-column">
+                                <ul>
+                                    <li class="sale">Акция</li>
+                                    <li class="new">Новинка</li>
+                                    <li class="top">ТОП</li>
+                                </ul>
+                                <p>Kaspersky Plus</p>
+                                <span>на 3 устройства</span>
+                            </div>
+                        </div>
+                        <div class="price-column">
+                            <div class="price">
+                                <span class="sale-price">3 500 руб.</span>
+                                <span class="actual-price">Скидка - 10%</span>
+                            </div>
+                            <div class="counter-wrap">
+                                <button type="button" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M17.25 11C17.6642 11 18 11.4477 18 12C18 12.5523 17.6642 13 17.25 13C8.4985 13 15.5015 13 6.75 13C6.33579 13 6 12.5523 6 12C6 11.4477 6.33579 11 6.75 11C15.2664 11 8.7336 11 17.25 11Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                                <span class="counter">1</span>
+                                <button type="button" class="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M12 6C12.4142 6 12.75 6.33579 12.75 6.75V11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H12.75V17.25C12.75 17.6642 12.4142 18 12 18C11.5858 18 11.25 17.6642 11.25 17.25V12.75H6.75C6.33579 12.75 6 12.4142 6 12C6 11.5858 6.33579 11.25 6.75 11.25H11.25V6.75C11.25 6.33579 11.5858 6 12 6Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="total-price">6 300 руб.</p>
+                            <button class="delete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#FF0000"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart-item">
+                        <div class="preview-column">
+                            <div class="image">
+                                <img src="./src/images/cart.png" alt="cart-image">
+                            </div>
+                            <div class="info-column">
+                                <ul>
+                                    <li class="sale">Акция</li>
+                                    <li class="new">Новинка</li>
+                                    <li class="top">ТОП</li>
+                                </ul>
+                                <p>Kaspersky Plus</p>
+                                <span>на 3 устройства</span>
+                            </div>
+                        </div>
+                        <div class="price-column">
+                            <div class="price">
+                                <span class="sale-price">3 500 руб.</span>
+                                <span class="actual-price">Скидка - 10%</span>
+                            </div>
+                            <div class="counter-wrap">
+                                <button type="button" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M17.25 11C17.6642 11 18 11.4477 18 12C18 12.5523 17.6642 13 17.25 13C8.4985 13 15.5015 13 6.75 13C6.33579 13 6 12.5523 6 12C6 11.4477 6.33579 11 6.75 11C15.2664 11 8.7336 11 17.25 11Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                                <span class="counter">1</span>
+                                <button type="button" class="plus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <circle cx="12" cy="12" r="10" fill="white"/>
+                                        <path d="M12 6C12.4142 6 12.75 6.33579 12.75 6.75V11.25H17.25C17.6642 11.25 18 11.5858 18 12C18 12.4142 17.6642 12.75 17.25 12.75H12.75V17.25C12.75 17.6642 12.4142 18 12 18C11.5858 18 11.25 17.6642 11.25 17.25V12.75H6.75C6.33579 12.75 6 12.4142 6 12C6 11.5858 6.33579 11.25 6.75 11.25H11.25V6.75C11.25 6.33579 11.5858 6 12 6Z" fill="#2454C0"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <p class="total-price">6 300 руб.</p>
+                            <button class="delete-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#FF0000"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <button class="clear-cart">Очистить корзину</button>
             </div>
             <div class="total-order">
                 <p>Ваш заказ:</p>
                 <ul>
                     <li>
-                        <p></p>
-                        <hr>
-                        <span></span>
+                        <p>Товаров</p>
+                        <hr style="border-top: 1px dotted #A9AEB9; flex-grow: 1" />
+                        <span>4 шт.</span>
                     </li>
                     <li>
-                        <p></p>
-                        <hr>
-                        <span></span>
+                        <p>Доставка</p>
+                        <hr style="border-top: 1px dotted #A9AEB9; flex-grow: 1" />
+                        <span>на E-mail</span>
                     </li>
                     <li>
-                        <p></p>
-                        <span class="price"></span>
+                        <p>Сумма в рублях:</p>
+                        <span class="price">15 750</span>
                     </li>
                 </ul>
+                <button type="button">Оформить</button>
             </div>
         </div>
     </div>

@@ -381,3 +381,35 @@ if (thumbsGallery) {
         },
     });
 }
+
+
+// counter
+
+
+const minusBtns = document.querySelectorAll('.counter-wrap .minus');
+const plusBtns = document.querySelectorAll('.counter-wrap .plus');
+
+if(minusBtns) {
+    minusBtns.forEach(el=> {
+        el.addEventListener('click' , (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            let currCounter = e.target.closest('.counter-wrap').querySelector('.counter');
+            if (currCounter.innerHTML > 0) {
+                currCounter.innerHTML = +currCounter.innerHTML - 1;
+            }
+        })
+    })
+}
+if(plusBtns) {
+    plusBtns.forEach(el=> {
+        el.addEventListener('click' , (e) => {
+            e.stopPropagation();
+            e.preventDefault();
+            let currCounter = e.target.closest('.counter-wrap').querySelector('.counter');
+            if (currCounter.innerHTML >= 0) {
+                currCounter.innerHTML = +currCounter.innerHTML + 1;
+            }
+        })
+    })
+}
