@@ -925,5 +925,390 @@
                     color: #fff; }
                   .dark-theme .product-info-container .content .info-block .product-row .product-row-info .characteristics ul li hr {
                     flex-grow: 1; }
+  .dark-theme .promotions-items {
+    padding: 30px 0 50px; }
+    .dark-theme .promotions-items .content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; }
+      .dark-theme .promotions-items .content .promotions-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px; }
+        @media (max-width: 1024px) {
+          .dark-theme .promotions-items .content .promotions-list {
+            gap: 30px; } }
+        .dark-theme .promotions-items .content .promotions-list .news-card {
+          display: flex;
+          width: calc((100% - 50px * 3) / 4);
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+          align-self: stretch;
+          border-radius: 15px;
+          background: #333A4A;
+          padding: 20px;
+          border: 1px solid #333A4A; }
+          @media (max-width: 1335px) {
+            .dark-theme .promotions-items .content .promotions-list .news-card {
+              width: calc((100% - 50px * 2) / 3); } }
+          @media (max-width: 1024px) {
+            .dark-theme .promotions-items .content .promotions-list .news-card {
+              width: calc((100% - 30px) / 2); } }
+          @media (max-width: 607px) {
+            .dark-theme .promotions-items .content .promotions-list .news-card {
+              width: 100%; } }
+          .dark-theme .promotions-items .content .promotions-list .news-card:hover {
+            border-radius: 15px;
+            border: 1px solid #5F6574; }
+            .dark-theme .promotions-items .content .promotions-list .news-card:hover .image-container img {
+              transform: scale(1.1); }
+            .dark-theme .promotions-items .content .promotions-list .news-card:hover p {
+              color: #C5D7FF;
+              text-decoration: underline; }
+          .dark-theme .promotions-items .content .promotions-list .news-card .image-container {
+            height: 415px;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px; }
+            .dark-theme .promotions-items .content .promotions-list .news-card .image-container img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; }
+          .dark-theme .promotions-items .content .promotions-list .news-card .row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            align-self: stretch; }
+            .dark-theme .promotions-items .content .promotions-list .news-card .row .rubrica {
+              display: flex;
+              padding: 2px 5px;
+              align-items: flex-start;
+              gap: 10px;
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal; }
+              .dark-theme .promotions-items .content .promotions-list .news-card .row .rubrica.news {
+                border-radius: 5px;
+                background: #626C81; }
+              .dark-theme .promotions-items .content .promotions-list .news-card .row .rubrica.sale {
+                border-radius: 5px;
+                background: #F00; }
+            .dark-theme .promotions-items .content .promotions-list .news-card .row .date {
+              color: #A9AEB9;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal; }
+              .dark-theme .promotions-items .content .promotions-list .news-card .row .date.sale-date {
+                color: #FF7373; }
+          .dark-theme .promotions-items .content .promotions-list .news-card p {
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+            /* 30px */
+            max-width: 240px; }
+  .dark-theme .contacts-block {
+    padding: 50px 0 100px; }
+    .dark-theme .contacts-block .content {
+      display: flex;
+      gap: 30px; }
+      @media (max-width: 1200px) {
+        .dark-theme .contacts-block .content {
+          flex-direction: column; } }
+      .dark-theme .contacts-block .content .contact-inner {
+        width: calc((100% - 30px) / 2);
+        padding: 50px;
+        border-radius: 15px;
+        background: var(--dark-color);
+        display: flex;
+        flex-direction: column;
+        gap: 50px; }
+        @media (max-width: 1200px) {
+          .dark-theme .contacts-block .content .contact-inner {
+            width: 100%; } }
+        @media (max-width: 600px) {
+          .dark-theme .contacts-block .content .contact-inner {
+            padding: 50px 20px; } }
+        .dark-theme .contacts-block .content .contact-inner ul {
+          width: 100%;
+          display: flex;
+          gap: 50px;
+          flex-wrap: wrap; }
+          .dark-theme .contacts-block .content .contact-inner ul li {
+            width: calc((100% - 50px) / 2);
+            display: flex;
+            flex-direction: column;
+            gap: 10px; }
+            @media (max-width: 600px) {
+              .dark-theme .contacts-block .content .contact-inner ul li {
+                width: 100%; } }
+            .dark-theme .contacts-block .content .contact-inner ul li span {
+              color: #AFB7C9;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 100%;
+              /* 15px */
+              text-transform: uppercase; }
+            .dark-theme .contacts-block .content .contact-inner ul li a {
+              color: #fff;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal; }
+              .dark-theme .contacts-block .content .contact-inner ul li a.phone {
+                color: #626C81;
+                font-family: "Myriad Pro";
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal; }
+            .dark-theme .contacts-block .content .contact-inner ul li p {
+              color: #FFFFFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal; }
+              .dark-theme .contacts-block .content .contact-inner ul li p.online {
+                color: #24C062;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-transform: uppercase; }
+        .dark-theme .contacts-block .content .contact-inner .location {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .dark-theme .contacts-block .content .contact-inner .location span {
+            color: #AFB7C9;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            /* 15px */
+            text-transform: uppercase; }
+          .dark-theme .contacts-block .content .contact-inner .location p {
+            color: #fff;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal; }
+        .dark-theme .contacts-block .content .contact-inner .social {
+          width: fit-content;
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 20px;
+          border-radius: 15px;
+          border: 1px solid #EEF2FA;
+          background: #FAFBFF; }
+          .dark-theme .contacts-block .content .contact-inner .social span {
+            color: #AFB7C9;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            /* 15px */
+            text-transform: uppercase; }
+        .dark-theme .contacts-block .content .contact-inner .download {
+          display: flex;
+          height: 74px;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          align-self: stretch;
+          border-radius: 10px;
+          border: 1px solid var(--brand-color);
+          color: var(--brand-color);
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: auto; }
+          .dark-theme .contacts-block .content .contact-inner .download:hover {
+            background: var(--brand-color);
+            color: #FFFFFF; }
+        .dark-theme .contacts-block .content .contact-inner .title {
+          display: flex;
+          flex-direction: column;
+          gap: 5px; }
+          .dark-theme .contacts-block .content .contact-inner .title p {
+            color: #fff;
+            font-family: "Myriad Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 100%;
+            /* 30px */
+            text-transform: uppercase; }
+          .dark-theme .contacts-block .content .contact-inner .title span {
+            color: #fff;
+            font-family: "Myriad Pro";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            /* 12px */ }
+        .dark-theme .contacts-block .content .contact-inner form {
+          display: flex;
+          flex-direction: column;
+          gap: 50px; }
+          @media (max-width: 600px) {
+            .dark-theme .contacts-block .content .contact-inner form {
+              gap: 30px; } }
+          .dark-theme .contacts-block .content .contact-inner form .wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; }
+            .dark-theme .contacts-block .content .contact-inner form .wrap span {
+              color: #AFB7C9;
+              font-family: "Myriad Pro";
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 100%;
+              /* 15px */
+              text-transform: uppercase; }
+            .dark-theme .contacts-block .content .contact-inner form .wrap input {
+              border-radius: 15px;
+              border: 2px solid #EEF2FA;
+              background: #FFF;
+              box-shadow: 0px 7px 12.2px -8px rgba(36, 84, 192, 0.37);
+              display: flex;
+              height: 55px;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 10px;
+              align-self: stretch;
+              width: 100%;
+              outline: none;
+              padding: 5px 20px; }
+              .dark-theme .contacts-block .content .contact-inner form .wrap input:focus {
+                border-radius: 15px;
+                border: 3px solid #EEF2FA;
+                background: #F8FAFF; }
+          .dark-theme .contacts-block .content .contact-inner form textarea {
+            display: flex;
+            height: 116px;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            align-self: stretch;
+            border-radius: 15px;
+            border: 2px solid #EEF2FA;
+            padding: 10px;
+            background: #FFF;
+            box-shadow: 0px 7px 12.2px -8px rgba(36, 84, 192, 0.37);
+            width: 100%;
+            resize: none;
+            outline: none; }
+            .dark-theme .contacts-block .content .contact-inner form textarea:focus {
+              border-radius: 15px;
+              border: 3px solid #EEF2FA;
+              background: #F8FAFF; }
+          .dark-theme .contacts-block .content .contact-inner form .input-inner {
+            display: flex;
+            gap: 50px; }
+            @media (max-width: 768px) {
+              .dark-theme .contacts-block .content .contact-inner form .input-inner {
+                flex-direction: column; } }
+            @media (max-width: 600px) {
+              .dark-theme .contacts-block .content .contact-inner form .input-inner {
+                gap: 30px; } }
+            .dark-theme .contacts-block .content .contact-inner form .input-inner .input-wrapper {
+              width: calc((100% - 50px) / 2); }
+              @media (max-width: 768px) {
+                .dark-theme .contacts-block .content .contact-inner form .input-inner .input-wrapper {
+                  width: 100%; } }
+              .dark-theme .contacts-block .content .contact-inner form .input-inner .input-wrapper input {
+                border-radius: 15px;
+                border: 2px solid #EEF2FA;
+                background: #FFF;
+                box-shadow: 0px 7px 12.2px -8px rgba(36, 84, 192, 0.37);
+                display: flex;
+                height: 55px;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 10px;
+                align-self: stretch;
+                width: 100%;
+                outline: none;
+                padding: 5px 20px; }
+                .dark-theme .contacts-block .content .contact-inner form .input-inner .input-wrapper input:focus {
+                  border-radius: 15px;
+                  border: 3px solid #EEF2FA;
+                  background: #F8FAFF; }
+              .dark-theme .contacts-block .content .contact-inner form .input-inner .input-wrapper span {
+                color: #AFB7C9;
+                font-family: "Myriad Pro";
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%;
+                /* 15px */
+                text-transform: uppercase; }
+          .dark-theme .contacts-block .content .contact-inner form .submit-row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            gap: 10px; }
+            @media (max-width: 768px) {
+              .dark-theme .contacts-block .content .contact-inner form .submit-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px; } }
+            .dark-theme .contacts-block .content .contact-inner form .submit-row button {
+              border: none;
+              border-radius: 10px;
+              background: var(--brand-color);
+              display: flex;
+              padding: 15px 20px;
+              align-items: center;
+              gap: 10px;
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              cursor: pointer; }
+              @media (max-width: 768px) {
+                .dark-theme .contacts-block .content .contact-inner form .submit-row button {
+                  width: 100%;
+                  justify-content: center; } }
+              .dark-theme .contacts-block .content .contact-inner form .submit-row button:hover {
+                background: #5287FF; }
+  .dark-theme .custom-checkbox span {
+    color: #fff;
+    font-family: "Myriad Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+    /* 12px */
+    max-width: 298px;
+    cursor: pointer; }
 
 /*# sourceMappingURL=dark-theme.css.map */
