@@ -413,3 +413,52 @@ if(plusBtns) {
         })
     })
 }
+
+
+// sms-modal
+
+const smsModal = document.querySelector('.sms-modal');
+const smsModalCloseBtn =  document.querySelector('.sms-modal .close-btn');
+const showSmsModalBtns = document.querySelectorAll('.show-sms-modal');
+
+showSmsModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault()
+        smsModal.classList.add('open');
+        overlay.classList.add('open');
+    })
+})
+smsModalCloseBtn?.addEventListener('click' , ()=> {
+    smsModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click' , ()=> {
+    smsModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+
+// order-modal
+
+
+const showOrderModalBtns = document.querySelectorAll('.show-order-modal');
+const orderModal = document.querySelector('.order-modal');
+const orderModalclose = document.querySelector('.order-modal .close-btn')
+
+showOrderModalBtns?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault()
+        smsModal.classList.remove('open');
+        orderModal.classList.add('open');
+        overlay.classList.add('open');
+    })
+})
+orderModalclose?.addEventListener('click' , ()=> {
+    orderModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click' , ()=> {
+    orderModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+
+const canceledOrders =  document.querySelectorAll('.box .orders li');
