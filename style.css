@@ -4488,7 +4488,6 @@ body {
 .canceled-order-modal {
   display: flex;
   width: 563px;
-  padding: 50px 30px;
   flex-direction: column;
   align-items: center;
   gap: 30px;
