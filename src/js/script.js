@@ -462,3 +462,74 @@ overlay.addEventListener('click' , ()=> {
 })
 
 const canceledOrders =  document.querySelectorAll('.box .orders li');
+const canceledOrderModal = document.querySelector('.canceled-order-modal')
+const canceledOrderModalClose = document.querySelector('.canceled-order-modal .close-btn');
+
+canceledOrders?.forEach(el=> {
+    el.addEventListener('click' , (e) => {
+        e.preventDefault()
+        canceledOrderModal.classList.add('open');
+        overlay.classList.add('open');
+    })
+})
+canceledOrderModalClose?.addEventListener('click' , ()=> {
+    canceledOrderModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+overlay.addEventListener('click' , ()=> {
+    canceledOrderModal.classList.remove('open');
+    overlay.classList.remove('open');
+})
+
+
+// logo-svg animation
+
+
+const animatedLogo = document.querySelector('.animated-svg');
+const gradient1 = document.getElementById('paint0_linear_2556_9742');
+const gradient2 = document.getElementById('paint2_linear_2556_9742');
+
+
+animatedLogo.addEventListener('mouseover', () => {
+    const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    animate.setAttribute('attributeName', 'x1');
+    animate.setAttribute('from', '-244.556');
+    animate.setAttribute('to', '0');
+    animate.setAttribute('dur', '0.3s');
+    animate.setAttribute('fill', 'freeze');
+    gradient1.appendChild(animate);
+    animate.beginElement();
+});
+
+animatedLogo.addEventListener('mouseout', () => {
+    const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    animate.setAttribute('attributeName', 'x1');
+    animate.setAttribute('from', '0');
+    animate.setAttribute('to', '-244.556');
+    animate.setAttribute('dur', '0.3s');
+    animate.setAttribute('fill', 'freeze');
+    gradient1.appendChild(animate);
+    animate.beginElement();
+});
+
+animatedLogo.addEventListener('mouseover', () => {
+    const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    animate.setAttribute('attributeName', 'x1');
+    animate.setAttribute('from', '-244.556');
+    animate.setAttribute('to', '-100.556');
+    animate.setAttribute('dur', '0.3s');
+    animate.setAttribute('fill', 'freeze');
+    gradient2.appendChild(animate);
+    animate.beginElement();
+});
+
+animatedLogo.addEventListener('mouseout', () => {
+    const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
+    animate.setAttribute('attributeName', 'x1');
+    animate.setAttribute('from', '-100.556');
+    animate.setAttribute('to', '-244.556');
+    animate.setAttribute('dur', '0.3s');
+    animate.setAttribute('fill', 'freeze');
+    gradient2.appendChild(animate);
+    animate.beginElement();
+});

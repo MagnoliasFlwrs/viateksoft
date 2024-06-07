@@ -273,6 +273,24 @@ body {
           }
         }
       }
+      a {
+        &.logo {
+          &:hover {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          opacity: .5;
+        }
+      }
+      .logo {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        &:hover {
+          opacity: 1;
+        }
+      }
       .time-label {
         display: flex;
         padding: 10px 15px;
@@ -324,6 +342,9 @@ body {
         align-items: center;
         gap: 10px;
         cursor: pointer;
+        &:hover {
+          opacity: .5;
+        }
         @media (max-width: 1288px) {
           padding: 10px;
         }
@@ -344,6 +365,9 @@ body {
         font-weight: 700;
         line-height: normal;
         white-space: nowrap;
+        &:hover {
+          opacity: 1;
+        }
         @media (max-width: 1288px) {
           font-size: 20px;
         }
@@ -357,6 +381,10 @@ body {
         border-radius: 10px;
         background: var(--brand-color);
         position: relative;
+        &:hover {
+          opacity: 1;
+          background: #5287FF;
+        }
         .not-empty {
           position: absolute;
           width: 10px;
@@ -505,8 +533,9 @@ body {
         li {
           a {
             display: flex;
-            padding: 0px 20px;
+            padding: 0 20px;
             align-items: center;
+            border-radius: 10px;
             gap: 20px;
             align-self: stretch;
             color: var(--light-blue);
@@ -516,8 +545,18 @@ body {
             font-weight: 400;
             line-height: normal;
             text-transform: uppercase;
+            &.nav-link {
+              padding: 10px 20px;
+              &:hover {
+                background: #4A79E3;
+              }
+              @media (max-width: 1328px) {
+                padding: 10px;
+              }
+            }
+
             @media (max-width: 1328px) {
-              padding: 0px 10px;
+              padding: 0 10px;
             }
             @media (max-width: 1226px) {
               font-size: 12px;
@@ -528,6 +567,24 @@ body {
       .search {
         flex-grow: 1;
         position: relative;
+        &:hover {
+          input {
+            background: #FFF;
+            justify-content: flex-start;
+            &::placeholder {
+              color: var(--brand-color);
+              text-align: left;
+            }
+          }
+          .search-btn {
+            svg path {
+              stroke: var(--brand-color);
+            }
+            svg circle {
+              stroke: var(--brand-color);
+            }
+          }
+        }
         input {
           display: flex;
           width: 100%;
@@ -541,6 +598,7 @@ body {
           border: 1px solid rgba(197, 215, 255, 0.24);
           outline: none;
           background: transparent;
+
           &::placeholder {
             color: var(--light-blue);
             font-family: "Myriad Pro";
@@ -576,6 +634,15 @@ body {
         border-radius: 10px;
         border: 1px solid rgba(197, 215, 255, 0.24);
         background: transparent;
+        &:hover {
+          background: #FFFFFF;
+          span {
+            color: var(--brand-color);
+          }
+          svg path {
+            stroke: var(--brand-color);
+          }
+        }
         span {
           color: #FFF;
           font-family: "Myriad Pro";
@@ -1121,7 +1188,7 @@ body {
                   line-height: normal;
                 }
               }
-              button {
+              a {
                 display: flex;
                 padding: 10px 20px;
                 align-items: center;
@@ -3265,6 +3332,7 @@ body {
             display: flex;
             gap: 20px;
             align-items: center;
+            cursor: pointer;
             .date {
               color: #FFF;
               font-family: "Myriad Pro";
@@ -5356,6 +5424,24 @@ body {
         &:hover {
           background: #5287FF;
         }
+      }
+      .order-product {
+        color: #2E3441;
+        text-align: center;
+        font-family: "Myriad Pro";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; /* 39px */
+      }
+      .order-status {
+        color: #24C062;
+        text-align: center;
+        font-family: "Myriad Pro";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 19.5px */
       }
     }
     .close-btn {

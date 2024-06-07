@@ -232,6 +232,16 @@ body {
         @media (max-width: 1288px) {
           .header .header-contacts-row .content .label span {
             width: unset; } }
+    .header .header-contacts-row .content a.logo:hover {
+      opacity: 1; }
+    .header .header-contacts-row .content a:hover {
+      opacity: .5; }
+    .header .header-contacts-row .content .logo {
+      display: flex;
+      flex-direction: column;
+      gap: 11px; }
+      .header .header-contacts-row .content .logo:hover {
+        opacity: 1; }
     .header .header-contacts-row .content .time-label {
       display: flex;
       padding: 10px 15px;
@@ -275,6 +285,8 @@ body {
       align-items: center;
       gap: 10px;
       cursor: pointer; }
+      .header .header-contacts-row .content .callback:hover {
+        opacity: .5; }
       @media (max-width: 1288px) {
         .header .header-contacts-row .content .callback {
           padding: 10px; } }
@@ -293,6 +305,8 @@ body {
       font-weight: 700;
       line-height: normal;
       white-space: nowrap; }
+      .header .header-contacts-row .content .header-phone:hover {
+        opacity: 1; }
       @media (max-width: 1288px) {
         .header .header-contacts-row .content .header-phone {
           font-size: 20px; } }
@@ -305,6 +319,9 @@ body {
       border-radius: 10px;
       background: var(--brand-color);
       position: relative; }
+      .header .header-contacts-row .content .cart-btn:hover {
+        opacity: 1;
+        background: #5287FF; }
       .header .header-contacts-row .content .cart-btn .not-empty {
         position: absolute;
         width: 10px;
@@ -428,8 +445,9 @@ body {
       align-items: center; }
       .header .header-nav .content ul li a {
         display: flex;
-        padding: 0px 20px;
+        padding: 0 20px;
         align-items: center;
+        border-radius: 10px;
         gap: 20px;
         align-self: stretch;
         color: var(--light-blue);
@@ -439,15 +457,32 @@ body {
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase; }
+        .header .header-nav .content ul li a.nav-link {
+          padding: 10px 20px; }
+          .header .header-nav .content ul li a.nav-link:hover {
+            background: #4A79E3; }
+          @media (max-width: 1328px) {
+            .header .header-nav .content ul li a.nav-link {
+              padding: 10px; } }
         @media (max-width: 1328px) {
           .header .header-nav .content ul li a {
-            padding: 0px 10px; } }
+            padding: 0 10px; } }
         @media (max-width: 1226px) {
           .header .header-nav .content ul li a {
             font-size: 12px; } }
     .header .header-nav .content .search {
       flex-grow: 1;
       position: relative; }
+      .header .header-nav .content .search:hover input {
+        background: #FFF;
+        justify-content: flex-start; }
+        .header .header-nav .content .search:hover input::placeholder {
+          color: var(--brand-color);
+          text-align: left; }
+      .header .header-nav .content .search:hover .search-btn svg path {
+        stroke: var(--brand-color); }
+      .header .header-nav .content .search:hover .search-btn svg circle {
+        stroke: var(--brand-color); }
       .header .header-nav .content .search input {
         display: flex;
         width: 100%;
@@ -491,6 +526,12 @@ body {
       border-radius: 10px;
       border: 1px solid rgba(197, 215, 255, 0.24);
       background: transparent; }
+      .header .header-nav .content .order-status:hover {
+        background: #FFFFFF; }
+        .header .header-nav .content .order-status:hover span {
+          color: var(--brand-color); }
+        .header .header-nav .content .order-status:hover svg path {
+          stroke: var(--brand-color); }
       .header .header-nav .content .order-status span {
         color: #FFF;
         font-family: "Myriad Pro";
@@ -941,7 +982,7 @@ body {
               font-style: normal;
               font-weight: 400;
               line-height: normal; }
-          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button {
+          .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info a {
             display: flex;
             padding: 10px 20px;
             align-items: center;
@@ -950,7 +991,7 @@ body {
             background: var(--brand-color);
             border: none;
             cursor: pointer; }
-            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info button span {
+            .main-banner .content .banner-swiper-container .swiper-block .main-banner-swiper .swiper-slide .slide-info a span {
               color: #FFF;
               font-family: "Myriad Pro";
               font-size: 20px;
@@ -2768,7 +2809,8 @@ body {
           .side-menu .box .content ul.orders li {
             display: flex;
             gap: 20px;
-            align-items: center; }
+            align-items: center;
+            cursor: pointer; }
             .side-menu .box .content ul.orders li .date {
               color: #FFF;
               font-family: "Myriad Pro";
@@ -4641,6 +4683,24 @@ body {
         cursor: pointer; }
         .canceled-order-modal .modal-body .order-details a:hover {
           background: #5287FF; }
+      .canceled-order-modal .modal-body .order-details .order-product {
+        color: #2E3441;
+        text-align: center;
+        font-family: "Myriad Pro";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        /* 39px */ }
+      .canceled-order-modal .modal-body .order-details .order-status {
+        color: #24C062;
+        text-align: center;
+        font-family: "Myriad Pro";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        /* 19.5px */ }
     .canceled-order-modal .modal-body .close-btn {
       cursor: pointer;
       position: absolute;

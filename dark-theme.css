@@ -575,6 +575,47 @@
               line-height: 100%;
               /* 20px */
               text-decoration-line: underline; }
+          .dark-theme .side-menu .box .content ul.orders {
+            padding: 0; }
+            .dark-theme .side-menu .box .content ul.orders li {
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              cursor: pointer; }
+              .dark-theme .side-menu .box .content ul.orders li .date {
+                color: #FFF;
+                font-family: "Myriad Pro";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 100%;
+                /* 12px */
+                display: flex;
+                height: 25px;
+                padding: 10px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--brand-color); }
+              .dark-theme .side-menu .box .content ul.orders li p {
+                color: var(--brand-color);
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                /* 20px */
+                text-decoration-line: underline; }
+                .dark-theme .side-menu .box .content ul.orders li p span {
+                  font-weight: 400;
+                  color: var(--brand-color);
+                  width: unset;
+                  height: unset;
+                  background: unset;
+                  display: inline;
+                  padding: 0; }
         .dark-theme .side-menu .box .content .hide {
           display: flex;
           padding: 5px 10px 0px 10px;
@@ -1981,5 +2022,655 @@
             width: 100%; }
           .dark-theme .success-payment-container .content .side-menu .box {
             width: 100%; } }
+  .dark-theme .order-status-container {
+    padding: 25px 0 50px; }
+    .dark-theme .order-status-container .content {
+      display: flex;
+      gap: 30px; }
+      @media (max-width: 1024px) {
+        .dark-theme .order-status-container .content {
+          flex-direction: column; } }
+      .dark-theme .order-status-container .content .order-status-box {
+        display: flex;
+        flex-grow: 1;
+        border-radius: 15px;
+        background-color: var(--dark-color);
+        box-shadow: 0px 29px 39.2px -23px rgba(0, 0, 0, 0.25);
+        padding: 50px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        height: fit-content; }
+        .dark-theme .order-status-container .content .order-status-box .order-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .dark-theme .order-status-container .content .order-status-box .order-info p {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            /* 50px */ }
+          .dark-theme .order-status-container .content .order-status-box .order-info span {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 19.5px */ }
+        .dark-theme .order-status-container .content .order-status-box .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px; }
+          .dark-theme .order-status-container .content .order-status-box .text span {
+            color: #fff;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */
+            text-align: center; }
+          .dark-theme .order-status-container .content .order-status-box .text p {
+            color: #fff;
+            font-family: "Myriad Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center; }
+        .dark-theme .order-status-container .content .order-status-box .counter {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center; }
+          .dark-theme .order-status-container .content .order-status-box .counter div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; }
+            .dark-theme .order-status-container .content .order-status-box .counter div span {
+              color: #fff;
+              text-align: center;
+              font-family: "Myriad Pro";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              /* 15.6px */ }
+              .dark-theme .order-status-container .content .order-status-box .counter div span:first-child {
+                display: flex;
+                width: 41px;
+                padding: 20px 10px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--dark-bg);
+                color: #fff;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                /* 26px */ }
+        .dark-theme .order-status-container .content .order-status-box .attention {
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 15px;
+          background: #F00;
+          width: fit-content; }
+          .dark-theme .order-status-container .content .order-status-box .attention p {
+            color: #FFF;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */ }
+            .dark-theme .order-status-container .content .order-status-box .attention p span {
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%; }
+        .dark-theme .order-status-container .content .order-status-box a {
+          width: 100%;
+          display: flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px;
+          background: var(--brand-color);
+          color: #FFF;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border: none;
+          cursor: pointer; }
+          .dark-theme .order-status-container .content .order-status-box a:hover {
+            background: #5287FF; }
+      .dark-theme .order-status-container .content .order-status-form {
+        flex-grow: 1;
+        background-color: var(--dark-color);
+        background-image: url("./src/images/order-status.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        padding: 50px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        align-self: stretch;
+        border-radius: 15px; }
+        .dark-theme .order-status-container .content .order-status-form form {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          align-items: center; }
+          .dark-theme .order-status-container .content .order-status-form form p {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 120%;
+            /* 24px */
+            text-transform: uppercase; }
+            .dark-theme .order-status-container .content .order-status-form form p span {
+              color: var(--brand-color);
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 120%; }
+          .dark-theme .order-status-container .content .order-status-form form input {
+            display: flex;
+            width: 291px;
+            height: 55px;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            border-radius: 15px;
+            border: 2px solid #EEF2FA;
+            background: #FFF;
+            box-shadow: 0px 7px 12.2px -8px rgba(36, 84, 192, 0.37);
+            outline: none;
+            padding: 5px 20px; }
+            .dark-theme .order-status-container .content .order-status-form form input:focus {
+              border-radius: 15px;
+              border: 3px solid #EEF2FA;
+              background: #F8FAFF; }
+          .dark-theme .order-status-container .content .order-status-form form button {
+            display: flex;
+            padding: 15px 20px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            border-radius: 10px;
+            background: var(--brand-color);
+            color: #FFF;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border: none;
+            cursor: pointer; }
+            .dark-theme .order-status-container .content .order-status-form form button:hover {
+              background: #5287FF; }
+      @media (max-width: 1024px) {
+        .dark-theme .order-status-container .content .side-menu {
+          max-width: 100%; }
+          .dark-theme .order-status-container .content .side-menu .total-order {
+            width: 100%; }
+          .dark-theme .order-status-container .content .side-menu .consult-card {
+            width: 100%; }
+          .dark-theme .order-status-container .content .side-menu .box {
+            width: 100%; } }
+  .dark-theme .sms-modal {
+    display: flex;
+    max-width: 613px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    background: var(--dark-bg);
+    box-shadow: 0px 29px 39.2px -23px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    display: none; }
+    @media (max-width: 768px) {
+      .dark-theme .sms-modal {
+        max-width: 95%; } }
+    .dark-theme .sms-modal.open {
+      display: flex; }
+    .dark-theme .sms-modal .modal-body {
+      width: 100%;
+      position: relative;
+      padding: 50px 30px; }
+      .dark-theme .sms-modal .modal-body form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; }
+        .dark-theme .sms-modal .modal-body form p {
+          color: #fff;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          /* 39px */ }
+        .dark-theme .sms-modal .modal-body form input {
+          display: flex;
+          width: 291px;
+          height: 55px;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 10px;
+          border-radius: 15px;
+          border: 2px solid #EEF2FA;
+          background: #FFF;
+          box-shadow: 0px 7px 12.2px -8px rgba(36, 84, 192, 0.37);
+          outline: none;
+          padding: 5px 20px; }
+          .dark-theme .sms-modal .modal-body form input:focus {
+            border-radius: 15px;
+            border: 3px solid #EEF2FA;
+            background: #F8FAFF; }
+        .dark-theme .sms-modal .modal-body form button {
+          display: flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px;
+          background: var(--brand-color);
+          color: #FFF;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border: none;
+          cursor: pointer; }
+          .dark-theme .sms-modal .modal-body form button:hover {
+            background: #5287FF; }
+        .dark-theme .sms-modal .modal-body form span {
+          color: #fff;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          /* 19.5px */ }
+      .dark-theme .sms-modal .modal-body .close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px; }
+  .dark-theme .order-modal {
+    display: flex;
+    max-width: 1073px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    background: var(--dark-bg);
+    box-shadow: 0px 29px 39.2px -23px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    display: none; }
+    @media (max-width: 1100px) {
+      .dark-theme .order-modal {
+        max-width: 95%; } }
+    .dark-theme .order-modal.open {
+      display: flex; }
+    .dark-theme .order-modal .modal-body {
+      width: 100%;
+      position: relative;
+      padding: 50px 30px; }
+      .dark-theme .order-modal .modal-body .order-details {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; }
+        .dark-theme .order-modal .modal-body .order-details .order-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .dark-theme .order-modal .modal-body .order-details .order-info p {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            /* 50px */ }
+          .dark-theme .order-modal .modal-body .order-details .order-info span {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 19.5px */ }
+        .dark-theme .order-modal .modal-body .order-details .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px; }
+          .dark-theme .order-modal .modal-body .order-details .text span {
+            color: #fff;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */
+            text-align: center; }
+          .dark-theme .order-modal .modal-body .order-details .text p {
+            color: #fff;
+            font-family: "Myriad Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center; }
+        .dark-theme .order-modal .modal-body .order-details .counter {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center; }
+          .dark-theme .order-modal .modal-body .order-details .counter div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; }
+            .dark-theme .order-modal .modal-body .order-details .counter div span {
+              color: #fff;
+              text-align: center;
+              font-family: "Myriad Pro";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              /* 15.6px */ }
+              .dark-theme .order-modal .modal-body .order-details .counter div span:first-child {
+                display: flex;
+                width: 41px;
+                padding: 20px 10px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                border-radius: 5px;
+                background: var(--dark-color);
+                color: #fff;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                /* 26px */ }
+        .dark-theme .order-modal .modal-body .order-details .attention {
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 15px;
+          background: #F00;
+          width: fit-content; }
+          .dark-theme .order-modal .modal-body .order-details .attention p {
+            color: #FFF;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */ }
+            .dark-theme .order-modal .modal-body .order-details .attention p span {
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%; }
+        .dark-theme .order-modal .modal-body .order-details a {
+          width: 100%;
+          display: flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px;
+          background: var(--brand-color);
+          color: #FFF;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border: none;
+          cursor: pointer; }
+          .dark-theme .order-modal .modal-body .order-details a:hover {
+            background: #5287FF; }
+      .dark-theme .order-modal .modal-body .close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px; }
+  .dark-theme .canceled-order-modal {
+    display: flex;
+    width: 563px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    background: var(--dark-bg);
+    box-shadow: 0px 29px 39.2px -23px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 12;
+    display: none; }
+    @media (max-width: 1100px) {
+      .dark-theme .canceled-order-modal {
+        max-width: 95%; } }
+    .dark-theme .canceled-order-modal.open {
+      display: flex; }
+    @media (max-width: 600px) {
+      .dark-theme .canceled-order-modal {
+        max-width: 95%; } }
+    .dark-theme .canceled-order-modal .modal-body {
+      width: 100%;
+      position: relative;
+      padding: 50px 30px; }
+      .dark-theme .canceled-order-modal .modal-body .order-details {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center; }
+        .dark-theme .canceled-order-modal .modal-body .order-details .order-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+          .dark-theme .canceled-order-modal .modal-body .order-details .order-info p {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 50px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 100%;
+            /* 50px */ }
+          .dark-theme .canceled-order-modal .modal-body .order-details .order-info span {
+            color: var(--brand-color);
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 19.5px */ }
+        .dark-theme .canceled-order-modal .modal-body .order-details .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 5px; }
+          .dark-theme .canceled-order-modal .modal-body .order-details .text span {
+            color: #2E3441;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */
+            text-align: center; }
+          .dark-theme .canceled-order-modal .modal-body .order-details .text p {
+            color: #2E3441;
+            font-family: "Myriad Pro";
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            text-align: center; }
+        .dark-theme .canceled-order-modal .modal-body .order-details .counter {
+          display: flex;
+          gap: 10px;
+          justify-content: center;
+          align-items: center; }
+          .dark-theme .canceled-order-modal .modal-body .order-details .counter div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px; }
+            .dark-theme .canceled-order-modal .modal-body .order-details .counter div span {
+              color: #2E3441;
+              text-align: center;
+              font-family: "Myriad Pro";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+              /* 15.6px */ }
+              .dark-theme .canceled-order-modal .modal-body .order-details .counter div span:first-child {
+                display: flex;
+                width: 41px;
+                padding: 20px 10px;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                border-radius: 5px;
+                background: #EEF2FA;
+                color: #2E3441;
+                text-align: center;
+                font-family: "Myriad Pro";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 130%;
+                /* 26px */ }
+        .dark-theme .canceled-order-modal .modal-body .order-details .attention {
+          display: flex;
+          padding: 20px;
+          align-items: center;
+          gap: 10px;
+          border-radius: 15px;
+          background: #F00;
+          width: fit-content; }
+          .dark-theme .canceled-order-modal .modal-body .order-details .attention p {
+            color: #FFF;
+            text-align: center;
+            font-family: "Myriad Pro";
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            /* 26px */ }
+            .dark-theme .canceled-order-modal .modal-body .order-details .attention p span {
+              color: #FFF;
+              font-family: "Myriad Pro";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%; }
+        .dark-theme .canceled-order-modal .modal-body .order-details a {
+          width: 100%;
+          display: flex;
+          padding: 15px 20px;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          border-radius: 10px;
+          background: var(--brand-color);
+          color: #FFF;
+          font-family: "Myriad Pro";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          border: none;
+          cursor: pointer; }
+          .dark-theme .canceled-order-modal .modal-body .order-details a:hover {
+            background: #5287FF; }
+        .dark-theme .canceled-order-modal .modal-body .order-details .order-product {
+          color: #fff;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          /* 39px */ }
+        .dark-theme .canceled-order-modal .modal-body .order-details .order-status {
+          color: #24C062;
+          text-align: center;
+          font-family: "Myriad Pro";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          /* 19.5px */ }
+      .dark-theme .canceled-order-modal .modal-body .close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px; }
 
 /*# sourceMappingURL=dark-theme.css.map */
