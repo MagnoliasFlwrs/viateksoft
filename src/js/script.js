@@ -493,7 +493,7 @@ const gradient2 = document.getElementById('paint2_linear_2556_9742');
 animatedLogo.addEventListener('mouseover', () => {
     const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
     animate.setAttribute('attributeName', 'x1');
-    animate.setAttribute('from', '-244.556');
+    animate.setAttribute('from', '-321.393');
     animate.setAttribute('to', '0');
     animate.setAttribute('dur', '0.3s');
     animate.setAttribute('fill', 'freeze');
@@ -505,7 +505,7 @@ animatedLogo.addEventListener('mouseout', () => {
     const animate = document.createElementNS('http://www.w3.org/2000/svg', 'animate');
     animate.setAttribute('attributeName', 'x1');
     animate.setAttribute('from', '0');
-    animate.setAttribute('to', '-244.556');
+    animate.setAttribute('to', '-321.393');
     animate.setAttribute('dur', '0.3s');
     animate.setAttribute('fill', 'freeze');
     gradient1.appendChild(animate);
