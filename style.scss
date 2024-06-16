@@ -1434,9 +1434,9 @@ body {
     width: 100%;
   }
   &:hover{
-    border-radius: 5px;
-    border: 1px solid #EDEDED;
-    background: #FAFBFF;
+    border-radius: 15px;
+    background: #F7F9FD;
+    box-shadow: 0px 4px 19.9px -8px rgba(36, 84, 192, 0.40);
     .img-container {
       img {
         transform: scale(1.2);
@@ -1832,10 +1832,15 @@ body {
           }
           &:hover {
             .list-wrap {
+              border-radius: 15px;
+              background: #F7F9FD;
+              box-shadow: 0px 4px 19.9px -8px rgba(36, 84, 192, 0.40);
               ul {
+                background: #F7F9FD;
                 margin-top: 0;
                 li {
                   color: var(--brand-color);
+
                 }
               }
             }
@@ -1882,6 +1887,9 @@ body {
                   font-style: normal;
                   font-weight: 400;
                   line-height: normal;
+                  &:hover {
+                    text-decoration: underline;
+                  }
                 }
               }
             }
@@ -2504,6 +2512,11 @@ body {
       font-weight: 400;
       line-height: normal;
       cursor: pointer;
+      &:hover {
+        border-radius: 10px;
+        background: #5287FF;
+        color: #FFF;
+      }
       &.active {
         color: #FFF;
         border-radius: 10px;
@@ -3201,9 +3214,16 @@ body {
 .side-menu {
   max-width: 337px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  position: relative;
+  .side-menu-wrapper  {
+    position: sticky;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
   .box {
     display: flex;
     width: 337px;
@@ -4210,14 +4230,22 @@ body {
 .total-order {
   display: flex;
   width: 337px;
-  padding: 50px;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  border-radius: 15px;
-  background: #FFF;
-  height: fit-content;
+
   @media (max-width: 1130px) {
+    width: 100%;
+  }
+  .total-order-container {
+    position: sticky;
+    top: 10px;
+    left: 0;
+    height: fit-content;
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border-radius: 15px;
+    background: #FFF;
     width: 100%;
   }
   p {
